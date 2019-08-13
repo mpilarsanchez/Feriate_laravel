@@ -1,0 +1,15 @@
+div.inicio {
+  width: 90%;
+  margin: 21px auto;
+  text-align: center;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+}
+div.inicio h1{
+  font-family: "Inconsolata", sans-serif;
+}
+button a{
+  font-weight: bold;
+  text-decoration: none;
+}

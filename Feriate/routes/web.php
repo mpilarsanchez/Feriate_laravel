@@ -11,8 +11,37 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
 
-Route::get("/usuarios", "UsuariosController@listado");
+Route::get('/home', 'HomeController@index')->name('home');
+
+//Route::get("/usuarios", "UsuariosController@listado");
+
+Route::get('/index', 'CategoriasContoller@index');
+Route::get('/', 'CategoriasContoller@index');
+
+ Route::get('/ferias/categoria/{categoria}', function ($categoria) {
+     return 'Aca se tienen que mostras todas las ferias de la categoria ..'.$categoria;
+ });
+
+ Route::get('/productos/categoria/{categoria}', function ($categoria) {
+     return 'Aca se tienen que mostras todos los productos de la categoria ..'.$categoria;
+ });
+
+
+ //static pages
+ Route::get('/contacto', function () {
+     return view('contacto');
+ });
+
+ Route::get('/quienes_somos', function () {
+     return view('quienes_somos');
+ });
+
+ Route::get('/preguntas', function () {
+     return view('preguntas');
+ });
+
+ Route::get('/donaciones', function () {
+     return view('donaciones');
+ });

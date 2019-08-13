@@ -1,0 +1,70 @@
+div.container{
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+}
+
+span{
+  color: #FF6978;
+}
+h1{
+  font-family: "Inconsolata",sans-serif;
+  font-weight: bold;
+  color: #3e403f;
+  text-align: center;
+}
+
+form{
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+input.form-control {
+  width: 80%;
+  border-bottom: 1px solid white;
+  margin: 0 auto;
+}
+
+select.form-control {
+  border-bottom: 1px solid white;
+}
+
+input.form-check-input {
+  border-bottom: 1px solid white;
+}
+
+div.container label {
+  font-family: "Inconsolata", sans-serif;
+  text-align: center;
+  color: #3e403f;
+}
+
+span {
+
+  font-weight: bold;
+}
+
+.navbar-brand span {
+  color: white !important;
+  font-weight: bold;
+}
+
+div.container button {
+  background-color: white;
+  font-family: "Inconsolata",sans-serif;
+  font-weight: bold;
+  color: #3e403f;
+  border: 1px solid white;
+
+}
+@media (min-width: 940px){
+div.container{
+  width: 80%;
+  margin-top: 1%;
+}
+input.form-control {
+width: 60%;
+}
+
+}
