@@ -1,26 +1,26 @@
-CREATE DATABASE `feriate_db` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE feriate_db;
+CREATE DATABASE `feriate` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE feriate;
 
 /* Por convencion los nombres de las columbas llevan la abreviacion del nombre de la tabla
 guion bajo (_) y el nombre de la columna, para identificarlos con mayor facilidad. Por ejemplo :
   `comp_pr_id` : significa tabla compras - producto_id*/
 
 
-  CREATE TABLE `usuarios` (
-    `us_id` int(11) NOT NULL AUTO_INCREMENT,
-    `us_nombre` varchar(45) NOT NULL,
-    `us_apellido` varchar(45) NOT NULL,
-    `us_email` varchar(45) NOT NULL,
-    `us_pass` varchar(100) NOT NULL,
-    `us_tel` int(11) DEFAULT NULL,
-    `us_direccion` varchar(100) DEFAULT NULL,
-    `us_localidad` varchar(45) DEFAULT NULL,
-    `us_pais` int(11) DEFAULT NULL,
-    `us_fecha_reg` datetime DEFAULT NULL,
-    `us_intentos_log` int(11) DEFAULT NULL,
-    `us_activo` tinyint(4) DEFAULT NULL,
-    `us_notificaciones` tinyint(4) DEFAULT NULL,
-    PRIMARY KEY (`us_id`)
+  CREATE TABLE `users` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `nombre` varchar(45) NOT NULL,
+    `apellido` varchar(45) NOT NULL,
+    `email` varchar(45) NOT NULL,
+    `password` varchar(100) NOT NULL,
+    `tel` int(11) DEFAULT NULL,
+    `direccion` varchar(100) DEFAULT NULL,
+    `localidad` varchar(45) DEFAULT NULL,
+    `pais` int(11) DEFAULT NULL,
+    `fecha_reg` datetime DEFAULT NULL,
+    `intentos_log` int(11) DEFAULT NULL,
+    `activo` tinyint(4) DEFAULT NULL,
+    `notificaciones` tinyint(4) DEFAULT NULL,
+    PRIMARY KEY (`id`)
   ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
     CREATE TABLE `ferias` (
