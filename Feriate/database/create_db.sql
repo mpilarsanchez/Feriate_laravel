@@ -31,7 +31,8 @@ guion bajo (_) y el nombre de la columna, para identificarlos con mayor facilida
       `hasta` varchar(45) NOT NULL,
       `ubicacion` varchar(45) NOT NULL,
       `descripcion` longtext NOT NULL,
-      `fecha_creacion` datetime NOT NULL,
+      `created_at` datetime NOT NULL,
+      `updated_at` datetime NOT NULL,
       `activa` tinyint(4) DEFAULT NULL,
       `baneado` tinyint(4) DEFAULT NULL,
       PRIMARY KEY (`id`),
@@ -47,6 +48,19 @@ guion bajo (_) y el nombre de la columna, para identificarlos con mayor facilida
     PRIMARY KEY (`cat_id`)
   ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
+
+  CREATE TABLE `imagenes` (
+      `id` int(11) NOT NULL AUTO_INCREMENT,
+      `producto_id` int(11) DEFAULT NULL,
+      `feria_id` int(11) DEFAULT NULL,
+      `nombre` varchar(100) NOT NULL,
+      `user_id` int(11) DEFAULT NULL,
+      PRIMARY KEY (`id`),
+      KEY `feria_id` (`feria_id`),
+      KEY `user_id` (`user_id`),
+      CONSTRAINT `ferias_id` FOREIGN KEY (`feria_id`) REFERENCES `ferias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+      CONSTRAINT `users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+    ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 -- //desde aca ir revisando y creando las tablas nooooo usarr!!!!!
    CREATE TABLE `productos` (
     `pr_id` int(11) NOT NULL AUTO_INCREMENT,
