@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Feria extends Model
 {
-  public $table = "feriate";
+  public $table = "ferias";
   public $primaryKey = "id";
-  public $timestamps = false;
   public $guarded = [];
+
+  public function imagenes(){
+    return $this->hasMany("App\Imagen", "feria_id");
+  }
 }

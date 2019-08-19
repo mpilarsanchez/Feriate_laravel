@@ -36,7 +36,10 @@ Route::get('/', 'CategoriasContoller@index');
    });
 
    Route::post('/crearFeria','FeriasController@crear');
+   Route::get('/ferias/{id}', 'FeriasController@traerFeria');
+
  });
+
 
 
  //static pages
