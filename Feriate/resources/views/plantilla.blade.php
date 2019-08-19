@@ -27,9 +27,15 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <a class="nav-link" href="/login">INGRESAR</a>
-            <button id="botones" class="btn btn-outline-success my-2 my-sm-0" type="submit" name="sesion">Cerrar Sesion</button>
-          </form>
+            @if(Auth::check())
+            <button id="botones" href="{{ route('logout') }}" class="btn btn-outline-success my-2 my-sm-0" type="submit" name="sesion"  onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">Cerrar Sesion</button>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
            <a href="/perfil"> <button id="botones" class="btn btn-outline-success my-2 my-sm-0" >Mi Perfil</button></a>
+            @endif;
               </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

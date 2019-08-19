@@ -13,7 +13,9 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home',function(){
+  return redirect('/index');
+});
 
 //Route::get("/usuarios", "UsuariosController@listado");
 
@@ -26,6 +28,14 @@ Route::get('/', 'CategoriasContoller@index');
 
  Route::get('/productos/categoria/{categoria}', function ($categoria) {
      return 'Aca se tienen que mostras todos los productos de la categoria ..'.$categoria;
+ });
+
+ Route::middleware(['auth'])->group(function(){
+   Route::get('/crearFeria',function(){
+     return view('crearFeria');
+   });
+
+   Route::post('/crearFeria','FeriasController@crear');
  });
 
 

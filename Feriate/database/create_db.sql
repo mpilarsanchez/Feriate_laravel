@@ -23,21 +23,21 @@ guion bajo (_) y el nombre de la columna, para identificarlos con mayor facilida
     PRIMARY KEY (`id`)
   ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-    CREATE TABLE `ferias` (
-    `fe_id` int(11) NOT NULL AUTO_INCREMENT,
-    `fe_us_id` int(11) NOT NULL,
-    `fe_nombre` varchar(100) NOT NULL,
-    `fe_desde` varchar(45) NOT NULL,
-    `fe_hasta` varchar(45) NOT NULL,
-    `fe_ubicacion` varchar(45) NOT NULL,
-    `fe_descripcion` longtext NOT NULL,
-    `fe_fecha_creacion` datetime NOT NULL,
-    `fe_activa` tinyint(4) DEFAULT NULL,
-    `fe_baneado` tinyint(4) DEFAULT NULL,
-    PRIMARY KEY (`fe_id`),
-    KEY `fe_us_id` (`fe_us_id`),
-    CONSTRAINT `fe_us_id` FOREIGN KEY (`fe_us_id`) REFERENCES `usuarios` (`us_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+  CREATE TABLE `ferias` (
+      `id` int(11) NOT NULL AUTO_INCREMENT,
+      `user_id` int(11) NOT NULL,
+      `nombre` varchar(100) NOT NULL,
+      `desde` varchar(45) NOT NULL,
+      `hasta` varchar(45) NOT NULL,
+      `ubicacion` varchar(45) NOT NULL,
+      `descripcion` longtext NOT NULL,
+      `fecha_creacion` datetime NOT NULL,
+      `activa` tinyint(4) DEFAULT NULL,
+      `baneado` tinyint(4) DEFAULT NULL,
+      PRIMARY KEY (`id`),
+      KEY `user_id` (`user_id`),
+      CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+    ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
   CREATE TABLE `categorias` (
     `cat_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -47,7 +47,7 @@ guion bajo (_) y el nombre de la columna, para identificarlos con mayor facilida
     PRIMARY KEY (`cat_id`)
   ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-
+-- //desde aca ir revisando y creando las tablas nooooo usarr!!!!!
    CREATE TABLE `productos` (
     `pr_id` int(11) NOT NULL AUTO_INCREMENT,
     `pr_nombre` varchar(45) NOT NULL,
