@@ -40,7 +40,7 @@ class FeriasController extends Controller
       $ruta = $req->file("foto_feria")->store("public");
       $nombreArchivo = basename($ruta);
 
-      $feriaNueva->user_id = Auth::user()->id;;
+      $feriaNueva->user_id = Auth::user()->id;
       $feriaNueva->nombre = $req["nombre"];
       $feriaNueva->ubicacion = $req["ubicacion"];
       $feriaNueva->desde = $req["desde"];
@@ -49,7 +49,7 @@ class FeriasController extends Controller
       $feriaNueva->activa = 1;
       $feriaNueva->baneado = 0;
 
-
+//AGREGAR GUARDAR IMAGEN POR DEFECTO
       $feriaNueva->save();
       $feriaImagen->feria_id = $feriaNueva->id;
       $feriaImagen->nombre = $nombreArchivo;
@@ -60,4 +60,60 @@ class FeriasController extends Controller
     public function traerFeria($id){
       return "Esta es mi feria id: $id";
     }
+
+
+    public function edit($id){
+     $feriaEdit = Feria::find($id);
+     $vac = compact("feriaEdit");
+    return view("editarFeria", $vac);
+    }
+
+
+  public function update(Request $req, $id){
+
+    //  $id = $req["id"];
+      $updatedFeria = Feria::find($id);
+      $updatedFeria->user_id = Auth::user()->id;
+      $updatedFeria->nombre = $req["nombre"];
+      $updatedFeria->ubicacion = $req["ubicacion"];
+      $updatedFeria->desde = $req["desde"];
+      $updatedFeria->hasta = $req["hasta"];
+      $updatedFeria->descripcion= $req["descripcion"];
+
+      $updatedFeria->save();
+//CLAUSULA IF NO HACE FALTA SI SE AGREGA LA IMAGEN POR DEFECTO
+      if ($req["imagen"]== null || $req["imagen"] == '') {
+
+
+      }else{
+      $feriaImagen = Imagen::where('feria_id', '=' ,$id)
+      ->get()
+      ->first();
+      $ruta = $req->file("imagen")->store("public");
+      $nombreArchivo = basename($ruta);
+
+
+      $feriaImagen->feria_id = $id;
+      $feriaImagen->nombre = $nombreArchivo;
+      $feriaImagen->save();
+
+    }
+    return redirect("/feria/$id");
+  }
+
+     public function borrar(Request $req, $id){
+       $feriaImagen = Imagen::where('feria_id', '=' ,$id)
+       ->get()
+       ->first();
+
+       $feriaImagen->feria_id = $id;
+       $feriaImagen->delete();
+
+       $updatedFeria = Feria::find($id);
+       $updatedFeria->delete();
+
+     return redirect("/");
+     }
+
+
 }

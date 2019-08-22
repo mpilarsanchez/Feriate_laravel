@@ -36,8 +36,10 @@ Route::get('/', 'CategoriasContoller@index');
    });
 
    Route::post('/crearFeria','FeriasController@crear');
-   Route::get('/ferias/{id}', 'FeriasController@traerFeria');
-
+   Route::get('/feria/{id}', 'FeriasController@traerFeria');
+   Route::get("/editarFeria/{id}", "FeriasController@edit");
+   Route::put("/actualizarFeria/{id}", "FeriasController@update");
+   Route::delete("/borrarFeria/{id}", "FeriasController@borrar");
  });
 
 
