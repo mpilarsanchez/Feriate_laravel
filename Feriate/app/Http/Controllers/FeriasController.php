@@ -10,6 +10,7 @@ use Auth;
 
 class FeriasController extends Controller
 {
+
     public function crear(Request $req){
    //VALIDACION
      $reglas =[
@@ -29,7 +30,8 @@ class FeriasController extends Controller
      "numeric"=>"El campo :attribute debe ser un numero",
      "date"=> "El campo :attribute debe ser una fecha",
      "integer"=>"El campo :attribute debe ser un numero entero",
-     "unique"=>"El campo :attribute se encuentra repetido"
+     "unique"=>"El campo :attribute se encuentra repetido",
+     "file"=>"El archivo tiene que ser ..... jpg.."
      ];
 
       $this->validate($req, $reglas, $mensajes);
@@ -58,8 +60,13 @@ class FeriasController extends Controller
     }
 
     public function traerFeria($id){
-      return "Esta es mi feria id: $id";
+      $feria = Feria::find($id);
+      $vac = compact("feria");
+      return view("/feria", $vac);
     }
+
+      //return "Esta es mi feria id: $id";
+
 
 
     public function edit($id){
@@ -109,8 +116,8 @@ class FeriasController extends Controller
        $feriaImagen->feria_id = $id;
        $feriaImagen->delete();
 
-       $updatedFeria = Feria::find($id);
-       $updatedFeria->delete();
+       $deletedFeria = Feria::find($id);
+       $deletedFeria->delete();
 
      return redirect("/");
      }

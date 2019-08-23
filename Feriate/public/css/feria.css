@@ -146,6 +146,9 @@ div.comprar{
 
 
 @media (min-width: 940px){
+div.container{
+  height: fit-content;
+}
 div.producto{
   width: 90%;
   margin: 0 auto;
