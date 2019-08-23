@@ -3,17 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Usuario;
+use App\User;
+use Auth;
 
-class UsuariosController extends Controller
+class UsersController extends Controller
 {
+
   public function listado()
   {
-    //dd ("Llegue bien!!!");
     $usuarios = Usuario::all();
-    //dd($usuarios);
     $vac = compact("usuarios");
     return view("listadoUsuarios", $vac);
   }
 
+
+  public function traerUsuario(){
+    $usuario = User::find( Auth::user()->id);
+    $vac = compact("usuario");
+    return view("perfil", $vac);
+  }
 }

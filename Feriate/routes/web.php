@@ -30,16 +30,33 @@ Route::get('/', 'CategoriasContoller@index');
      return 'Aca se tienen que mostras todos los productos de la categoria ..'.$categoria;
  });
 
+ Route::get('/feria/{id}', 'FeriasController@traerFeria');
+
+
  Route::middleware(['auth'])->group(function(){
    Route::get('/crearFeria',function(){
      return view('crearFeria');
    });
 
    Route::post('/crearFeria','FeriasController@crear');
-   Route::get('/feria/{id}', 'FeriasController@traerFeria');
+   Route::get("/feria/{id}/cargarProducto", function(){
+     return 'aca crear un producto';
+   });
    Route::get("/editarFeria/{id}", "FeriasController@edit");
    Route::put("/actualizarFeria/{id}", "FeriasController@update");
    Route::delete("/borrarFeria/{id}", "FeriasController@borrar");
+   Route::get("/perfil","UsersController@traerUsuario");
+   Route::get('/carrito', function () {
+       return 'aca va el carrito';
+   });
+   Route::get('/misFerias', function () {
+       return 'aca van las ferias del usuario!!';
+   });
+
+   Route::get('/editarPerfil', function () {
+       return 'aca va editar perfil usuario';
+   });
+
  });
 
 
