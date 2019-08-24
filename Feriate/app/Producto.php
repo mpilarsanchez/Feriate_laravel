@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model
 {
-  public $table = "feriate";
+  public $table = "productos";
   public $primaryKey = "id";
-  public $timestamps = false;
   public $guarded = [];
+
 
   public function feria(){
     return $this->belongsTo("App\Feria", "feria_id");//El producto pertenece a una feria!!

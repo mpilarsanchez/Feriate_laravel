@@ -39,13 +39,13 @@ Route::get('/', 'CategoriasContoller@index');
    });
 
    Route::post('/crearFeria','FeriasController@crear');
-   Route::get("/feria/{id}/cargarProducto", function(){
-     return 'aca crear un producto';
-   });
+   Route::get("/feria/{id}/cargarProductos","CategoriasContoller@traerCategorias");
    Route::get("/editarFeria/{id}", "FeriasController@edit");
    Route::put("/actualizarFeria/{id}", "FeriasController@update");
    Route::delete("/borrarFeria/{id}", "FeriasController@borrar");
    Route::get("/perfil","UsersController@traerUsuario");
+   Route::post('/cargarProductos/{id}','ProductosController@cargar');
+
    Route::get('/carrito', function () {
        return 'aca va el carrito';
    });

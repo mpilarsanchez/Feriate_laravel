@@ -16,7 +16,6 @@ class UsersController extends Controller
     return view("listadoUsuarios", $vac);
   }
 
-
   public function traerUsuario(){
     $usuario = User::find( Auth::user()->id);
     $vac = compact("usuario");
