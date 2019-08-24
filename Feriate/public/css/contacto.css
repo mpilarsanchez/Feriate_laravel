@@ -31,22 +31,18 @@ div.field-set input{
     width: 80%;
     border: 0px;
 }
-textarea{
-      width: 80%;
-      border: 0px;
-      margin: 3%
+textarea.form-control.mt-3{
+    width: 80%;
+    border: 0px;
+    margin: 0 auto;
 }
-input#txt-input{
+#txt-input{
   font-size: 117%;
   font-family: 'Playfair Display', serif;
-  padding: 5%;
+
 
 }
-textarea{
-  font-size: 117%;
-  font-family: 'Playfair Display', serif;
-  padding: 5%;
-}
+
 div.field-set button.log-in{
       width: 80%;
       font-family: 'Playfair Display', serif;
@@ -74,7 +70,7 @@ div.redes i{
 div.field-set input{
     width: 40%;
 }
-textarea{
+textarea.form-control.mt-3{
       width: 40%;
       padding: 0%;
 }

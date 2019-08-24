@@ -14,14 +14,10 @@ div.head {
   position: relative;
 }
 #boton {
-  border: 1px solid black;
-  background-color: black;
   color: white;
   position: absolute;
   left: 26%;
   top: 55%;
-  padding: 1%;
-  width: 32%;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -73,7 +69,7 @@ transform: rotate(7deg);
 padding-top: 4%;
 height: 10%;
 margin-left: 6%;
-
+border-radius: 13px 13px;
 }
 div.leyenda h2 {
   font-weight: bold;
@@ -84,10 +80,12 @@ div.leyenda h3 {
   width: 100%;
     font-size: 70%;
 }
-div.comprar{
+div.header{
   position: relative;
 }
-
+div.redes i{
+  color: #FE4365;
+}
 div.comprar img{
 width: 100%;
 height: 160px;
@@ -105,7 +103,7 @@ div.marca{
   display: block;
   position: absolute;
   top: 5%;
-  right: 3%;
+  left: 3%;
 }
 div.marca h1{
   font-family: "Inconsolata", sans-serif;
@@ -114,6 +112,11 @@ div.marca h1{
 }
 div.carousel-item{
   height: 166.39px;
+}
+div.redes{
+  position: absolute;
+  top: 34%;
+  left: 10%;
 }
 @media (min-width: 940px){
 body{
@@ -207,5 +210,8 @@ div.marca{
 }
 div.comprar img{
   height: 300px;
+}
+div.redes{
+  display: none;
 }
 }

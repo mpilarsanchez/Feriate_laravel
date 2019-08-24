@@ -10,9 +10,9 @@
             <h3>y compartila con tus clientes, ellos reservan los productos y los retiran ese dia!</h3>
           </div>
           @if(Auth::check())
-            <a href="/crearFeria"><button id="boton" type="button" name="button">Crea tu feria!!!!</button></a>
+            <a href="/crearFeria"><button id="boton" type="button" name="button" class="btn btn-dark">Crea tu feria!!!!</button></a>
           @else
-            <a href="/login"><button id="boton" type="button" name="button">Logueate y Crea tu feria!</button></a>
+            <a href="/login"><button id="boton" type="button" name="button" class="btn btn-dark">Crea tu feria!</button></a>
           @endif;
           <div class="lista">
             <ul>

@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="./css/contacto.css">
 @section('titulo')
-Preguntas Frecuentes
+Contacto
 @endsection
 @section('content')
 
@@ -16,7 +16,9 @@ Preguntas Frecuentes
        <div class="field-set">
          <input class="form-input" id="txt-input" type="email" placeholder="Email" required>
           <br>
-        <textarea name="name" rows="8" cols="80" placeholder="Tu comentario"></textarea>
+          <div class="form-group">
+          <textarea class="form-control mt-3" rows="6" id="txt-input" placeholder="Tu comentario"></textarea>
+          </div>
           <br>
           <button class="log-in">Enviar!</button>
        </div>
