@@ -60,6 +60,10 @@ div.texto button {
     margin-top: 8%;
     margin-left: 17%;
 }
+div.texto button:hover{
+  background-color: #FFD0D9;
+  color: white;
+}
 
 
 div.texto h2 {
