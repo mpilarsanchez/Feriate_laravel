@@ -1,6 +1,6 @@
 @extends('plantilla')
-<link rel="stylesheet" href="./css/main.css">
-<link rel="stylesheet" href="./css/preguntas.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/preguntas.css">
 @section('titulo')
 Preguntas Frecuentes
 @endsection

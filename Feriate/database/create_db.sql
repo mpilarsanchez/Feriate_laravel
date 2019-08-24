@@ -1,11 +1,6 @@
 CREATE DATABASE `feriate` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE feriate;
 
-/* Por convencion los nombres de las columbas llevan la abreviacion del nombre de la tabla
-guion bajo (_) y el nombre de la columna, para identificarlos con mayor facilidad. Por ejemplo :
-  `comp_pr_id` : significa tabla compras - producto_id*/
-
-
   CREATE TABLE `users` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `nombre` varchar(45) NOT NULL,
@@ -79,7 +74,7 @@ CREATE TABLE `productos` (
 `feria_id` int(11) NOT NULL,
 `categoria_id` int(11) NOT NULL,
 `user_id` int(11) NOT NULL,
-PRIMARY KEY (`user_id`),
+PRIMARY KEY (`id`),
 KEY `fkey_us_id` (`id`),
 KEY `fkey_cat_id` (`categoria_id`),
 KEY `fkey_fe_id` (`feria_id`),
@@ -87,7 +82,7 @@ CONSTRAINT `categoria` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`ca
 CONSTRAINT `feria` FOREIGN KEY (`feria_id`) REFERENCES `ferias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 CONSTRAINT `user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='\n';
-;
+
 
 -- //desde aca ir revisando y creando las tablas nooooo usarr!!!!!
   CREATE TABLE `carrito` (
@@ -129,20 +124,6 @@ CONSTRAINT `user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO
 
 
 
-  CREATE TABLE `imagenes` (
-    `img_id` int(11) NOT NULL AUTO_INCREMENT,
-    `img_pr_id` int(11) DEFAULT NULL,
-    `img_fe_id` int(11) DEFAULT NULL,
-    `img_nombre` varchar(100) NOT NULL,
-    `img_us_id` int(11) DEFAULT NULL,
-    PRIMARY KEY (`img_id`),
-    KEY `pr_id` (`img_pr_id`),
-    KEY `fe_id` (`img_fe_id`),
-    KEY `us_id` (`img_us_id`),
-    CONSTRAINT `fe_id` FOREIGN KEY (`img_fe_id`) REFERENCES `ferias` (`fe_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-    CONSTRAINT `pr_id` FOREIGN KEY (`img_pr_id`) REFERENCES `productos` (`pr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-    CONSTRAINT `us_id` FOREIGN KEY (`img_us_id`) REFERENCES `usuarios` (`us_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
   /*TABLA CATEGORIAS*/

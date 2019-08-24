@@ -45,7 +45,9 @@ Route::get('/', 'CategoriasContoller@index');
    Route::delete("/borrarFeria/{id}", "FeriasController@borrar");
    Route::get("/perfil","UsersController@traerUsuario");
    Route::post('/cargarProductos/{id}','ProductosController@cargar');
-
+   Route::put('/editarProductos/{id}','ProductosController@update');
+   Route::delete('/borrarProducto/{id}','ProductosController@borrar');
+   Route::get('/editarProducto/{id}','ProductosController@edit');
    Route::get('/carrito', function () {
        return 'aca va el carrito';
    });
