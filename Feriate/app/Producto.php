@@ -17,7 +17,7 @@ class Producto extends Model
 }
 
 public function categoria(){
-  return $this->belongsTo("App\Categoria", "producto_id");//El producto pertenece a una feria!!
+  return $this->belongsTo("App\Categoria", "cat_id");//El producto pertenece a una categoria!!
 
 }
 
