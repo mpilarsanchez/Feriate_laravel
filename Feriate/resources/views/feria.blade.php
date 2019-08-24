@@ -18,17 +18,17 @@ Feria
           <h2> <i class="fas fa-star-of-life"></i>Fecha Inicio:{{$feria["desde"]}}</h2>
           <h2> <i class="fas fa-star-of-life"></i>Fecha Finalizacion:{{$feria["hasta"]}}</h2>
       @if(Auth::check())
-         {{-- @if(esDuenoDeFeria($value)) --}}
-           <a href="{{$feria["id"]}}/cargarProducto"><button id="boton" type="button" name="button">Cargar Productos</button></a>
+          @if($feria["user_id"] == Auth::user()->id)
+           <a href="/{{$feria["id"]}}/cargarProducto"><button id="boton" type="button" name="button">Cargar Productos</button></a>
            <a href="/editarFeria/{{$feria["id"]}}"><button id="boton" type="button" name="button" disable>Editar Feria</button></a>
          @endif
-       {{-- @endif  --}}
+          @endif
     </div>
   </div>
   <hr/>
     @if(empty($datos_productos))
      <div class="alert alert-danger" role="alert">
-       <p>Lo Sentimos No Hay Productos para la Categoria seleccionada</p>
+       <p>Lo Sentimos No Hay Productos para la Feria seleccionada</p>
     </div>
    @endif
   <main>

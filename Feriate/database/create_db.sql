@@ -62,31 +62,34 @@ guion bajo (_) y el nombre de la columna, para identificarlos con mayor facilida
       CONSTRAINT `ferias_id` FOREIGN KEY (`feria_id`) REFERENCES `ferias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
       CONSTRAINT `users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
     ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `productos` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`nombre` varchar(45) NOT NULL,
+`precio` decimal(10,0) DEFAULT NULL,
+`cantidad` int(11) DEFAULT NULL,
+`descripcion` varchar(45) DEFAULT NULL,
+`baneado` tinyint(4) DEFAULT NULL,
+`destino` tinyint(4) NOT NULL,
+`talle` varchar(45) DEFAULT NULL,
+`marca` varchar(45) DEFAULT NULL,
+`estado` varchar(45) DEFAULT NULL,
+`created_at` datetime NOT NULL,
+`updated_at` datetime NOT NULL,
+`feria_id` int(11) NOT NULL,
+`categoria_id` int(11) NOT NULL,
+`user_id` int(11) NOT NULL,
+PRIMARY KEY (`user_id`),
+KEY `fkey_us_id` (`id`),
+KEY `fkey_cat_id` (`categoria_id`),
+KEY `fkey_fe_id` (`feria_id`),
+CONSTRAINT `categoria` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `feria` FOREIGN KEY (`feria_id`) REFERENCES `ferias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='\n';
+;
+
 -- //desde aca ir revisando y creando las tablas nooooo usarr!!!!!
-   CREATE TABLE `productos` (
-    `pr_id` int(11) NOT NULL AUTO_INCREMENT,
-    `pr_nombre` varchar(45) NOT NULL,
-    `pr_precio` decimal(10,0) DEFAULT NULL,
-    `pr_cantidad` int(11) DEFAULT NULL,
-    `pr_descripcion` varchar(45) DEFAULT NULL,
-    `pr_baneado` tinyint(4) DEFAULT NULL,
-    `pr_destino` tinyint(4) NOT NULL,
-    `pr_talle` varchar(45) DEFAULT NULL,
-    `pr_marca` varchar(45) DEFAULT NULL,
-    `pr_estado` varchar(45) DEFAULT NULL,
-    `pr_fe_id` int(11) NOT NULL,
-    `pr_cat_id` int(11) NOT NULL,
-    `pr_us_id` int(11) NOT NULL,
-    PRIMARY KEY (`pr_id`),
-    KEY `fkey_us_id` (`pr_us_id`),
-    KEY `fkey_cat_id` (`pr_cat_id`),
-    KEY `fkey_fe_id` (`pr_fe_id`),
-    CONSTRAINT `fkey_cat_id` FOREIGN KEY (`pr_cat_id`) REFERENCES `categorias` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-    CONSTRAINT `fkey_fe_id` FOREIGN KEY (`pr_fe_id`) REFERENCES `ferias` (`fe_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-    CONSTRAINT `fkey_us_id` FOREIGN KEY (`pr_us_id`) REFERENCES `usuarios` (`us_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 COMMENT='\n';
-
-
   CREATE TABLE `carrito` (
     `carr_id` int(11) NOT NULL AUTO_INCREMENT,
     `carr_pr_id` int(11) NOT NULL,
