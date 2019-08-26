@@ -18,8 +18,6 @@ Perfil
     <div class="datos">
         <h1>@if((Auth::check()))
           <h2 class="title">Bienvenido {{$usuario->nombre}}</h2>
-            @else
-            //redirect login
             @endif</h1>
             @if ((Auth::check()))
               <h4>{{$usuario->email}}</h4>

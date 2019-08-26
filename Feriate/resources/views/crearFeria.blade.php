@@ -56,7 +56,7 @@ Crea tu Feria
     <div class="foto">
       <div class="form-group col-md-6">
         <label for="foto_feria">Subi una Foto de tu feria:</label>
-        <div class="display">
+        <div>
           @error('foto_feria')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -64,13 +64,10 @@ Crea tu Feria
           @enderror
         </div>
         <input type="file"  id="upload" name="foto_feria">
+        <img src="" id="profile-img-tag" width="200px" />
   <button type="submit"id="crear" class="btn btn-primary">Feriate!</button>
+  <p>Despues de crear tu Feria , podes subir tus productos</p>
   </form>
-  <ul>
-{{-- @foreach ($errores as $error)
-    <li class="alert alert-danger" role="alert">{{$error}}</a></li>
-  @endforeach;  --}}
-  </ul>
   </div>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
    <link rel="stylesheet" href="/resources/demos/style.css">

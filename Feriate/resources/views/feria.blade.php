@@ -18,55 +18,52 @@ Feria
           <h2> <i class="fas fa-star-of-life"></i>Fecha Inicio:{{$feria["desde"]}}</h2>
           <h2> <i class="fas fa-star-of-life"></i>Fecha Finalizacion:{{$feria["hasta"]}}</h2>
       @if(Auth::check())
-         {{-- @if(esDuenoDeFeria($value)) --}}
-           <a href="{{$feria["id"]}}/cargarProducto"><button id="boton" type="button" name="button">Cargar Productos</button></a>
+          @if($feria["user_id"] == Auth::user()->id)
+           <a href="/feria/{{$feria["id"]}}/cargarProductos"><button id="boton" type="button" name="button">Cargar Productos</button></a>
            <a href="/editarFeria/{{$feria["id"]}}"><button id="boton" type="button" name="button" disable>Editar Feria</button></a>
          @endif
-       {{-- @endif  --}}
+      @endif
     </div>
   </div>
   <hr/>
-    @if(empty($datos_productos))
+    @if(empty($feria->productos))
      <div class="alert alert-danger" role="alert">
-       <p>Lo Sentimos No Hay Productos para la Categoria seleccionada</p>
+       <p>Lo Sentimos No Hay Productos para la Feria seleccionada</p>
     </div>
-   @endif
+  @else
   <main>
     <div class="producto">
-  @if(!empty($datos_productos))
-      @foreach ($datos_productos as $producto)
+      @foreach ($feria->productos as $producto)
           <div class="card" >
             @if ($producto['img_nombre'] != '')
-          <img src="img_user/<?php echo $producto['img_nombre'] ?>" class="card-img-top" alt="...">
+          <img src="img_user/{{ $producto['nombre'] }}" class="card-img-top" alt="...">
              @endif
           @if ($producto['img_nombre'] == '')
           <img src="img_user/ropa2.jpg" class="card-img-top" alt="...">
            @endif
           <div class="card-body">
-            <h4 class="card-text"><?php echo $producto['pr_nombre'] ?></h4>
+            <h4 class="card-text">{{ $producto['nombre']}}</h4>
             <div class="descripcion">
-             <h3 class="precio"><b>Precio:<?php echo $producto['pr_precio'] ?></b><h3>
-             <h3 class="talle"><b>Talle:<?php echo $producto['pr_talle'] ?></b></h3>
-             <h3 class="marca"><b>Marca:<?php echo $producto['pr_marca'] ?></b></h3>
+              <h3 class="descripcion"><b>descripcion:{{ $producto['descripcion'] }}</b><h3>
+             <h3 class="precio"><b>Precio:{{$producto['precio'] }}</b><h3>
+             <h3 class="talle"><b>Talle:{{$producto['talle'] }}</b></h3>
+             <h3 class="marca"><b>Marca:{{ $producto['marca'] }}</b></h3>
            </div>
            <div class="descripcion">
-             <h3 class="estado"><b>Estado:<?php echo $producto['pr_estado'] ?></b></h3>
-             <h3 class="cantidad"><b>Cantidad:<?php echo $producto['pr_cantidad'] ?></b></h3>
+             <h3 class="estado"><b>Estado:{{ $producto['estado'] }}</b></h3>
+             <h3 class="cantidad"><b>Cantidad:{{ $producto['cantidad'] }}</b></h3>
             </div>
         </div>
             <div class="comprar">
             @if((Auth::check()) )
-            {{-- && !esDuenoDeFeria($value) ) --}}
-              <a href="carrito"><button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-shopping-cart"></i>  Agregar al carrito!</button></a>
-              <button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  Reserva este articulo!</button>
-            @endif
-             @if( (Auth::check()) )
-                 <a href="login" ><button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  logueate para comprar</button></a>
-           @endif
-            @if((Auth::check()) )
-             {{-- @if(esDuenoDeFeria($value)) --}}
-              <a href="editar_producto?id={{$producto['pr_id']}}"><button id="boton"  type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  Editar Producto</button></a>
-               {{-- @endif --}}
+              @if($feria["user_id"] == Auth::user()->id)
+               <a href="/editarProducto/{{$producto['id']}}"><button id="boton"  type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  Editar Producto</button></a>
+             @else
+               <a href="carrito"><button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-shopping-cart"></i>  Agregar al carrito!</button></a>
+               <button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  Reserva este articulo!</button>
+               @endif
+            @else
+              <a href="/login" ><button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  logueate para comprar</button></a>
              @endif
 
             </div>
