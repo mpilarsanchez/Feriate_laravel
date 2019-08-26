@@ -1,23 +1,11 @@
+footer{
+  display: none;
+}
 
-footer ul li {
-  width: 100%;
-  list-style: none;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 13px;
-  background-color: #FF6978;
-  color: white;
-  margin-top: 1%;
-}
-footer ul {
-  padding-inline-start: 0px;
-   margin-bottom: 0px;
-}
-footer ul li a{
-  color:black !important;
-  text-decoration-style: none;
-}
 @media (min-width: 940px){
+  footer{
+    display: block;
+  }
   footer ul li{
     width: 19%;
     float: left;
