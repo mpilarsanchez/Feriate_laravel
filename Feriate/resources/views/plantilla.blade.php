@@ -26,15 +26,15 @@
             </a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <a class="nav-link" href="/login">INGRESAR</a>
+            <a class="nav-link" href="/login">Ingresar</a>
             @if(Auth::check())
-            <button id="botones" href="{{ route('logout') }}" class="btn btn-outline-success my-2 my-sm-0" type="submit" name="sesion"  onclick="event.preventDefault();
-                           document.getElementById('logout-form').submit();">Cerrar Sesion</button>
+            <a  href="{{ route('logout') }}" class="nav-link"  name="sesion"  onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">Cerrar Sesion</a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
-           <a href="/perfil"> <button id="botones" class="btn btn-outline-success my-2 my-sm-0" >Mi Perfil</button></a>
+           <a href="/perfil" class="nav-link">Mi Perfil</a>
             @endif;
               </ul>
             <form class="form-inline my-2 my-lg-0">

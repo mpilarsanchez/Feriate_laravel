@@ -2,7 +2,7 @@
   width: 80%;
   text-align: center;
   border-radius: 5px;
-  margin: 15% auto;
+  margin: 10% auto;
   box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
   padding: 2%;
   background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
@@ -45,6 +45,9 @@ input#txt-input {
   font-family: 'Playfair Display', serif;
 }
 
+div.field-set button.log-in:hover{
+  background-color: #FFE6FA;
+}
 div.field-set button.log-in {
   width: 80%;
   font-family: 'Playfair Display', serif;
@@ -55,20 +58,18 @@ div.field-set button.log-in {
   color: #3e403f;
 }
 
-div.other {
-  margin: 5% 14%;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-}
 
 button.btn.submits.frgt-pass {
-  width: 18%;
+  width: 100%;
   display: block;
   font-size: 77%;
   font-weight: bold;
-}
 
+}
+a.btn.btn-link{
+  color: black;
+  font-family: "Inconsolata",sans-serif;
+}
 button.btn.submits.sign-up {
   color: #252537;
   display: block;
@@ -78,14 +79,16 @@ button.btn.submits.sign-up {
   border-radius: 5px;
   border: none;
   text-align: center;
-  margin: 7% auto;
+  margin: 0% auto;
   letter-spacing: 0.05em;
   background-color: #E3FDF5;
+  font-family:"Inconsolata", sans-serif;
 }
 @media (min-width: 940px){
 .formulario{
   margin: 2% auto;
   padding: 0%;
+  padding-bottom: 2%;
   width: 70%;
 }
 .formulario h2{
@@ -109,9 +112,11 @@ div.field-set button.log-in{
       width: 40%;
       margin-top: 1%;
 }
-div.other{
-  width: 55%;
-  margin: 0 25%;
+div.other {
+  margin: 3% auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 button.btn.submits.frgt-pass {
 width: 29%;
@@ -120,6 +125,7 @@ font-size: 130%;
 font-weight: bold;
 }
 button.btn.submits.sign-up{
+  width: 47%;
 font-size: 130%;
 }
 }

@@ -17,7 +17,7 @@ h1{
 form{
   display: block;
   width: 80%;
-  margin: 0 auto;
+  margin: 9% auto;
   text-align: center;
 }
 input.form-control {
@@ -65,6 +65,9 @@ div.container{
 }
 input.form-control {
 width: 60%;
+}
+form{
+  margin: 0 auto;
 }
 
 }
