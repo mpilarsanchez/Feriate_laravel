@@ -29,4 +29,13 @@ $( function() {
    })
  }
  showHiddeTalle();
+
+
+  function eliminar() {
+    if ( confirm("Esta seguro que quiere Eliminar?") == false ) {
+       return false ;
+    } else {
+       return true ;
+    }
+ }
 } );

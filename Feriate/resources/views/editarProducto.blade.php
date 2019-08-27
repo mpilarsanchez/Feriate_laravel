@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="/css/crear_producto.css">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/footer.css">
+<script src="/js/productos.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 @section('titulo')
@@ -109,13 +110,12 @@ Carga tus Productos
     </div>
      <button type="submit" class="btn btn-outline-light btn btn-lg btn-block mt-3" id="boton">Actualizar!</button>
     </form>
-    <form class="" action="/borrarProducto/{{$productoEdit['id']}}" method="post">
+    <form class="" action="/borrarProducto/{{$productoEdit['id']}}" method="post" onsubmit="eliminar()">
       {{method_field('delete')}}
       {{csrf_field()}}
-      <button type="submit" class="btn btn-outline-light btn btn-lg btn-block mt-3" id="boton">Borrar</button>
-      <input type="hidden" name="" value="{{$productoEdit['feria_id']}}"">
+      <button type="submit" class="btn btn-outline-light btn btn-lg btn-block mt-3" id="boton" >Borrar</button>
+      <input type="hidden" name="" value="{{$productoEdit['feria_id']}}">
     </form>
 </main>
-<script src="/js/productos.js"></script>
 </div>
 @endsection
