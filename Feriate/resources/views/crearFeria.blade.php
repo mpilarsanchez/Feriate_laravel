@@ -30,7 +30,7 @@ Crea tu Feria
           </span>
       @enderror
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
       <label for="datepicker"> Desde <span>*</span></label>
       <input type="text" class="form-control @error('desde') is-invalid @enderror" id="datepicker" placeholder="fecha inicio" name="desde" required>
       @error('desde')
@@ -39,12 +39,12 @@ Crea tu Feria
           </span>
       @enderror
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
       <label for="datepicker1"> Hasta <span>*</span></label>
       <input type="text" class="form-control @error('hasta') is-invalid @enderror" id="datepicker1" placeholder="fecha finalizacion" name="hasta" required>
     </div>
     <script src="./js/crear_feria.js"></script>
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
       <label for="descripcion"> Descripcion <span>*</span></label>
       <input type="text" name="descripcion" class="form-control @error('descripcion') is-invalid @enderror" id="descripcion" placeholder="descripcion">
       @error('hasta')
@@ -54,7 +54,7 @@ Crea tu Feria
       @enderror
     </div>
     <div class="foto">
-      <div class="form-group col-md-6">
+      <div class="form-group">
         <label for="foto_feria">Subi una Foto de tu feria:</label>
         <div>
           @error('foto_feria')
@@ -63,10 +63,12 @@ Crea tu Feria
               </span>
           @enderror
         </div>
-        <input type="file"  id="upload" name="foto_feria">
         <img src="" id="profile-img-tag" width="200px" />
-  <button type="submit"id="crear" class="btn btn-primary">Feriate!</button>
-  <p>Despues de crear tu Feria , podes subir tus productos</p>
+        <br>
+        <input type="file"  id="upload" name="foto_feria">
+        <br>
+  <button type="submit"id="crear">Feriate!</button>
+  <p class="mt-4">Despues de crear tu Feria , podes subir tus productos</p>
   </form>
   </div>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">

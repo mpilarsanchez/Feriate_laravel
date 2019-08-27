@@ -1,4 +1,6 @@
-
+div.container{
+  height: fit-content;
+}
 header {
   width: 100%;
 }
@@ -30,17 +32,14 @@ div.info h2 {
   font-family: "Inconsolata", sans-serif;
   width: 80%;
   font-weight: bold;
-  margin: 3% auto;
-  font-size: 127%;
+  margin: 10px auto;
+  font-size: 110%;
   color: #3e403f;
+  letter-spacing: 1px;
 }
-
-div.info i {
-    font-size: 15px;
-    color: rgba(255, 145, 170, 1);
-    padding-right: 5%;
+div.info p{
+margin-bottom: 0;
 }
-
 .ver_mas {
     font-size: 12px;
     display: block;
@@ -55,19 +54,7 @@ margin: 0 auto;
 font-size: 78%;
 color: #3e403f;
 }
-div.botones {
-  display: flex;
-  justify-content: space-around;
-}
 
-a#dropdownMenuLink.btn {
-  background-color: white;
-  padding: 8%;
-  color: #3e403f;
-  border: 2px solid #FFE6FA;
-  font-family: "Inconsolata", sans-serif;
-  font-weight: bold;
-}
 hr {
   border-top: 2px solid #21252966;
   width: 90%;
@@ -98,15 +85,19 @@ div.mapa{
 div.info{
   margin-bottom: 5%;
 }
-div.info button{
-  font-family: "Inconsolata", sans-serif;
-  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
-  margin-top: 5%;
+div.info button {
+  background-color: white;
+    color: #3e403f;
+    border: 2px solid #FFD0D9;
+    font-size: 20px;
+    border-radius: 13px 13px;
+    letter-spacing: 2px;
+    padding: 2%;
+    margin:1%;
 }
-div.comprar button{
-  font-family: "Inconsolata", sans-serif;
-  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
-  color:
+div.info button:hover{
+  background-color: #FFD0D9;
+  color: white;
 }
 div.card{
   border-radius: 13px 13px;
@@ -116,9 +107,7 @@ div.card{
   margin: 2%;
   float: left;
 }
-div.card img{
-  height: 30vh;
-}
+
 div.card p{
   font-family: "Inconsolata", sans-serif;
   font-weight: bold;
@@ -153,6 +142,12 @@ div.producto{
   width: 90%;
   margin: 0 auto;
 }
+div.info{
+  text-align: center;
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: bold;
+  width: 50%;
+}
 div.card{
   width: 20%;
   float: left;
@@ -167,18 +162,17 @@ div.info i{
   display: none;
 }
 div.info h2{
-  font-size: 100%;
+  font-size: 140%;
 }
 div.info a{
   font-size: 97%;
 }
-div.imagen img{
-  width: 45%;
-  border-radius: 51%;
-}
-div.imagen{
-display: block;
-margin-left: -15%;
-}
 
+div.imagen{
+  display: block;
+  width: 30%;
+}
+div.imagen img {
+width:60%!important;
+}
 }

@@ -8,15 +8,18 @@ Feria
 <div class="container">
   <div class="inicio">
     <div class="imagen">
-      <img src="/images/inicio.jpg" alt="">
+      <img src="/images/inicio.jpg" alt="" class="img-thumbnail">
     </div>
     <div class="info">
       <h1>{{$feria["nombre"]}}</h1>
           {{-- <h4 ><a href="#">Ver Mas Ferias de {{$feria->duenio->getNombreCompleto()}}</a></h4> --}}
-          <h2> <i class="fas fa-star-of-life"></i>{{$feria["ubicacion"]}}</h2><h4><a target="_blank" href="https://www.google.com/maps/place/{{$feria['ubicacion']}}" title="Click para ver en el mapa">Ver ubicacion</a> </h4>
-          <h2> <i class="fas fa-star-of-life"></i>{{$feria["descripcion"]}}</h2>
-          <h2> <i class="fas fa-star-of-life"></i>Fecha Inicio:{{$feria["desde"]}}</h2>
-          <h2> <i class="fas fa-star-of-life"></i>Fecha Finalizacion:{{$feria["hasta"]}}</h2>
+          <h2> Donde?</h2>
+          <p>{{$feria["ubicacion"]}}</p>
+          <h6><a target="_blank" href="https://www.google.com/maps/place/{{$feria['ubicacion']}}" title="Click para ver en el mapa">Ver ubicacion</a> </h6>
+          <h2>Que encontras?</h2>
+          <p>{{$feria["descripcion"]}}<p>
+          <h2>Desde:{{$feria["desde"]}}</h2>
+          <h2>Hasta:{{$feria["hasta"]}}</h2>
       @if(Auth::check())
           @if($feria["user_id"] == Auth::user()->id)
            <a href="/feria/{{$feria["id"]}}/cargarProductos"><button id="boton" type="button" name="button">Cargar Productos</button></a>

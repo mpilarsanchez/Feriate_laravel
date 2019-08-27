@@ -29,13 +29,13 @@ Perfil
    <div class="secciones">
      <div class="comprar">
         <h1>Gestiona tus ferias..</h1>
-        <a href="/misFerias"><button type="button" name="button">Mis ferias<i class="fas fa-store"></i></button></a>
-        <a href="/crearFeria">  <button type="button" name="button">Crea una feria! <i class="fas fa-store"></i></button></a>
+        <a href="/misFerias"><button type="button" name="button">Mis ferias  <i class="fas fa-store"></i></button></a>
+        <a href="/crearFeria">  <button type="button" name="button">Crea una feria!  <i class="fas fa-store"></i></button></a>
      </div>
      <div class="comprar">
         <h1>.. o tus compras</h1>
-        <a href="/carrito"><button type="button" name="button">Mi carrito<i class="fas fa-shopping-cart"></i></button></a>
-        <a href="http://www.mercadopago.com.ar" target="_blank"><button type="button" name="button">Ver mis medios de pago<i class="fas fa-shopping-cart"></i></button></a>
+        <a href="/carrito"><button type="button" name="button">Mi carrito  <i class="fas fa-shopping-cart"></i></button></a>
+        <a href="http://www.mercadopago.com.ar" target="_blank"><button type="button" name="button">Ver mis medios de pago  <i class="fas fa-shopping-cart"></i></button></a>
      </div>
     </div>
   </main>

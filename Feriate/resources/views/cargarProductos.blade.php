@@ -1,8 +1,6 @@
 @extends('plantilla')
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/crear_producto.css">
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/footer.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 @section('titulo')
@@ -33,9 +31,9 @@ Carga tus Productos
             </span>
         @enderror
       </div>
-      <div class="form-group col-md-4">
+      <div class="form-group col-md-3">
         <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01">Categoria<span>*</span></label>
+        <label for="inputGroupSelect01">Categoria<span>*</span></label>
           </div>
             <select class="custom-select categoria" id="inputGroupSelect01"  name="categoria">
               @foreach ($categorias as $categoria)
@@ -43,7 +41,7 @@ Carga tus Productos
               @endforeach
        </select>
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-3">
         <label for="precio"> Precio <span>*</span></label>
           <input type="precio" class="form-control @error('precio') is-invalid @enderror" id="precio" placeholder="precio de tu producto" name="precio">
         @error('precio')
@@ -52,18 +50,10 @@ Carga tus Productos
             </span>
         @enderror
       </div>
-      <div class="form-group col-md-6">
-        <label for="cantidad"> Cantidad <span>*</span></label>
-        <input type="text" name="cantidad" class="form-control" id="cantidad" placeholder="Cantidad" required>
-        @error('cantidad')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-        @enderror
-      </div>
-        <div class="form-group col-md-4 talle">
+
+        <div class="form-group col-md-3 talle">
           <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Talle<span>*</span></label>
+            <label for="inputGroupSelect01">Talle<span>*</span></label>
           </div>
           <select class="custom-select" id="inputGroupSelect01" name="talle">
             <option selected>xs</option>
@@ -73,9 +63,9 @@ Carga tus Productos
             <option value="4">xl</option>
           </select>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-3">
             <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Estado <span>*</span></label>
+            <label  for="inputGroupSelect01">Estado <span>*</span></label>
           </div>
           <select class="custom-select" id="inputGroupSelect01" name="estado">
             <option selected>elige</option>

@@ -1,6 +1,6 @@
 @extends('plantilla')
   <link rel="stylesheet" href="/css/index.css">
-  <link rel="stylesheet" href="../css/footer.css">
+
   <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/ferias.css">
 @section('titulo')
@@ -19,7 +19,7 @@ Mis Ferias
         <a href="/crearFeria"><button id="boton" type="button" name="button" class="btn btn-dark">Crea tu feria!!!!</button></a>
        </div>
      @else
-    <main>
+    <div class="d-md-flex justify-content-around">
         @foreach ($datosFerias as $feria)
         <div class="feria">
           <div class="header-feria">
@@ -46,4 +46,5 @@ Mis Ferias
         </div>
        @endforeach
    @endif
+ </div>
 @endsection
