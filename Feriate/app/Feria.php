@@ -18,12 +18,13 @@ class Feria extends Model
 
   //relacion Feria/Usuario : una feria pertenece a un usuario
   public function propietario(){
-    return $this->belongsTo("App\User", "user_id");//lleva 2 parametros 1) que tipo de objeto debe devolver el metodo y                                                                       //la clave foranea (genre_id)
+    return $this->belongsTo("App\User", "user_id");                                                                       //la clave foranea (genre_id)
   }
 
 //relacion Feria/Productos
 public function productos(){
   return $this->hasMany("App\Producto", "feria_id");
 }
+
 
 }

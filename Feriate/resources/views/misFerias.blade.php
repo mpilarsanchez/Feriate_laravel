@@ -4,32 +4,19 @@
   <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/ferias.css">
 @section('titulo')
-Ferias por categoria
+Mis Ferias
 @endsection
 @section('content')
 
   <div class="container">
     <div class="inicio">
-      <h1>Ferias Americanas</h1>
-      <h2>Elegi la feria segun su ubicacion o los productos que te gusten</h2>
+      <h1>Mis Ferias</h1>
     </div>
-  @if(!$datosFerias->isEmpty())
-    <div class="botones">
-      <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ORDENAR POR
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#">Ubicacion</a>
-          <a class="dropdown-item" href="#">Fecha</a>
-        </div>
-      </div>
-    </div>
-  @endif
     <hr>
      @if($datosFerias->isEmpty())
        <div class="alert alert-danger mx-5" role="alert" >
-        <p>Lo Sentimos No Hay Datos para la Categoria seleccionada</p>
+        <p>todavia No tenes ninguna Feria </p>
+        <a href="/crearFeria"><button id="boton" type="button" name="button" class="btn btn-dark">Crea tu feria!!!!</button></a>
        </div>
      @else
     <main>

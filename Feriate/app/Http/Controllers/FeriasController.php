@@ -5,12 +5,32 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Feria;
 use App\Imagen;
+use App\Categoria;
 use Auth;
 
 
 class FeriasController extends Controller
 {
 
+     public function datosFerias($categoria)
+     {
+
+       $datosCategorias = Categoria::where('cat_nombre', $categoria)->first();
+       $categoriaId = $datosCategorias['cat_id'];
+       $datosFerias = Feria::all();
+       $vac = compact("datosFerias");
+       return view("ferias", $vac);
+
+   }
+
+   public function misFerias()
+   {
+
+     $datosFerias = Feria::where('user_id',Auth::user()->id )->get();
+     $vac = compact("datosFerias");
+     return view("misFerias", $vac);
+
+  }
     public function crear(Request $req){
    //VALIDACION
      $reglas =[

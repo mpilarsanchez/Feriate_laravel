@@ -29,7 +29,7 @@ Perfil
    <div class="secciones">
      <div class="comprar">
         <h1>Gestiona tus ferias..</h1>
-        <a href="/misFerias"><button type="button" name="button">Editar ferias <i class="fas fa-store"></i></button></a>
+        <a href="/misFerias"><button type="button" name="button">Mis ferias<i class="fas fa-store"></i></button></a>
         <a href="/crearFeria">  <button type="button" name="button">Crea una feria! <i class="fas fa-store"></i></button></a>
      </div>
      <div class="comprar">

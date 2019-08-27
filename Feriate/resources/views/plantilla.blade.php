@@ -26,7 +26,9 @@
             </a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            @if(!Auth::check())
             <a class="nav-link" href="/login">Ingresar</a>
+          @endif
             @if(Auth::check())
             <a  href="{{ route('logout') }}" class="nav-link"  name="sesion"  onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">Cerrar Sesion</a>

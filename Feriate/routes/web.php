@@ -22,13 +22,13 @@ Route::get('/home',function(){
 Route::get('/index', 'CategoriasContoller@index');
 Route::get('/', 'CategoriasContoller@index');
 
- Route::get('/ferias/categoria/{categoria}', function ($categoria) {
-     return 'Aca se tienen que mostras todas las ferias de la categoria ..'.$categoria;
- });
+ // Route::get('/ferias/categoria/{categoria}', function ($categoria) {
+ //     //return 'Aca se tienen que mostras todas las ferias de la categoria ..'.$categoria;
+ //       return view('ferias');
+ // });
+ Route::get('/ferias/categoria/{categoria}', 'FeriasController@datosFerias');
 
- Route::get('/productos/categoria/{categoria}', function ($categoria) {
-     return 'Aca se tienen que mostras todos los productos de la categoria ..'.$categoria;
- });
+ Route::get('/productos/categoria/{categoria}', 'ProductosController@datosProductos');
 
  Route::get('/feria/{id}', 'FeriasController@traerFeria');
 
@@ -51,9 +51,7 @@ Route::get('/', 'CategoriasContoller@index');
    Route::get('/carrito', function () {
        return 'aca va el carrito';
    });
-   Route::get('/misFerias', function () {
-       return 'aca van las ferias del usuario!!';
-   });
+   Route::get('/misFerias', 'FeriasController@misFerias');
 
    Route::get('/editarPerfil', function () {
        return 'aca va editar perfil usuario';

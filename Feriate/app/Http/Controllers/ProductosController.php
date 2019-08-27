@@ -138,4 +138,15 @@ public function cargar(Request $req){
      $feria_id = $req["feria_id"];
      return redirect("/feria/$feria_id");
    }
+
+   public function datosProductos($categoria)
+   {
+
+     $datosCategorias = Categoria::where('cat_nombre', $categoria)->first();
+     $categoriaId = $datosCategorias['cat_id'];
+     $datosProductos = Producto::where('categoria_id', $categoriaId)->get();
+     $vac = compact("datosProductos");
+     return view("productos", $vac);
+
+ }
 }
