@@ -144,9 +144,16 @@ public function cargar(Request $req){
 
      $datosCategorias = Categoria::where('cat_nombre', $categoria)->first();
      $categoriaId = $datosCategorias['cat_id'];
-     $datosProductos = Producto::where('categoria_id', $categoriaId)->get();
+     $datosProductos = Producto::where('categoria_id', $categoriaId)->paginate(1);
      $vac = compact("datosProductos");
      return view("productos", $vac);
 
+ }
+
+   public function search(Request $req){
+      $datosProductos = Producto::where('nombre', 'like', '%'.$req["search"].'%')->paginate(1);
+      $busqueda = $req["search"];
+      $vac = compact("datosProductos", "busqueda");
+      return view("productos", $vac);
  }
 }

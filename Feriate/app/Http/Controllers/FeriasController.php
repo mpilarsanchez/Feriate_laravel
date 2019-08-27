@@ -17,7 +17,7 @@ class FeriasController extends Controller
 
        $datosCategorias = Categoria::where('cat_nombre', $categoria)->first();
        $categoriaId = $datosCategorias['cat_id'];
-       $datosFerias = Feria::all();
+       $datosFerias = Feria::paginate(1);
        $vac = compact("datosFerias");
        return view("ferias", $vac);
 
@@ -26,7 +26,7 @@ class FeriasController extends Controller
    public function misFerias()
    {
 
-     $datosFerias = Feria::where('user_id',Auth::user()->id )->get();
+     $datosFerias = Feria::where('user_id',Auth::user()->id )->paginate(1);
      $vac = compact("datosFerias");
      return view("misFerias", $vac);
 
@@ -142,5 +142,6 @@ class FeriasController extends Controller
      return redirect("/");
      }
 
+ 
 
 }

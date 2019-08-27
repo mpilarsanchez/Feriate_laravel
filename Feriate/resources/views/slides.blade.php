@@ -24,7 +24,7 @@
           @if(Auth::check())
             <a href="/crearFeria"><button id="boton" type="button" name="button" class="btn btn-dark">Crea tu feria!!!!</button></a>
           @else
-            <a href="/login"><button id="boton" type="button" name="button" class="btn btn-dark">Crea tu feria!</button></a>
+            <a href="/login"><button id="boton" type="button" name="button" class="btn btn-dark">Logueate para Crear tu feria!</button></a>
           @endif;
           <div class="lista">
             <ul>
