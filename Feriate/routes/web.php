@@ -16,23 +16,14 @@ Auth::routes();
 Route::get('/home',function(){
   return redirect('/index');
 });
-
-//Route::get("/usuarios", "UsuariosController@listado");
-
-Route::get('/index', 'CategoriasContoller@index');
-Route::get('/', 'CategoriasContoller@index');
-
- // Route::get('/ferias/categoria/{categoria}', function ($categoria) {
- //     //return 'Aca se tienen que mostras todas las ferias de la categoria ..'.$categoria;
- //       return view('ferias');
- // });
+ Route::get('/index', 'CategoriasContoller@index');
+ Route::get('/', 'CategoriasContoller@index');
+ //
  Route::get('/ferias/categoria/{categoria}', 'FeriasController@datosFerias');
-
- Route::get('/productos/categoria/{categoria}', 'ProductosController@datosProductos');
-
  Route::get('/feria/{id}', 'FeriasController@traerFeria');
-
-
+ //
+ Route::get('/productos/categoria/{categoria}', 'ProductosController@datosProductos');
+ //
  Route::middleware(['auth'])->group(function(){
    Route::get('/crearFeria',function(){
      return view('crearFeria');
@@ -59,21 +50,17 @@ Route::get('/', 'CategoriasContoller@index');
 
  });
 
-
-
+ Route::post('/search', 'ProductosController@search');
  //static pages
  Route::get('/contacto', function () {
      return view('contacto');
  });
-
  Route::get('/quienes_somos', function () {
      return view('quienes_somos');
  });
-
  Route::get('/preguntas', function () {
      return view('preguntas');
  });
-
  Route::get('/donaciones', function () {
      return view('donaciones');
  });

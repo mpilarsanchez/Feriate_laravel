@@ -38,7 +38,11 @@ Productos
   <hr>
  @if($datosProductos->isEmpty())
      <div class="alert alert-danger" role="alert">
-  <p>Lo Sentimos No Hay Productos para la Categoria seleccionada</p>
+    @if(isset($busqueda) && $busqueda != '')   
+        <p>Lo Sentimos No Hay Productos para la Busqueda {{ $busqueda }}</p>
+    @else
+        <p>Lo Sentimos No Hay Productos para la Categoria seleccionada</p>
+    @endif
      </div>
   @else
   <main>
@@ -67,6 +71,7 @@ Productos
           </div>
         </div>
 @endforeach
+{{$datosProductos->links()}}
 </div>
 @endif
 @endsection

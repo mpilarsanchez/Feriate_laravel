@@ -43,6 +43,7 @@ Ferias por categoria
             @endif
           </div>
         </div>
+        {{$datosFerias->links()}} 
        @endforeach
    @endif
    </div>

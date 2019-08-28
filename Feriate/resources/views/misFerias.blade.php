@@ -44,6 +44,7 @@ Mis Ferias
             @endif
           </div>
         </div>
+        {{$datosFerias->links()}} 
        @endforeach
    @endif
  </div>
