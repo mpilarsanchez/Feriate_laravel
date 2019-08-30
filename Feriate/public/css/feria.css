@@ -1,4 +1,6 @@
-
+div.container{
+  height: fit-content;
+}
 header {
   width: 100%;
 }
@@ -9,80 +11,36 @@ div.inicio {
   width: 90%;
   margin: 21px auto;
   height: 10%;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 div.imagen{
   display: none;
 }
-div.info h1 {
-  font-family: "Playfair Display", sans-serif;
-  font-weight: bold;
-  padding-top: 4%;
-  font-size: 215%;
-    color:#3e403f;
-}
-
-div.info h2 {
-  font-family: "Inconsolata", sans-serif;
-  width: 80%;
-  font-weight: bold;
-  margin: 3% auto;
-  font-size: 127%;
+div.inicio p{
+  font-family: "Cookie", cursive;
+  font-size:50%;
   color: #3e403f;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-top : 4%;
 }
-
-div.info i {
-    font-size: 15px;
-    color: rgba(255, 145, 170, 1);
-    padding-right: 5%;
-}
-
-.ver_mas {
-    font-size: 12px;
-    display: block;
-    padding-top: 3%;
-}
-
-div.info a{
-text-decoration: none;
-font-family: "Inconsolata", sans-serif;
-width: 65%;
-margin: 0 auto;
-font-size: 78%;
-color: #3e403f;
-}
-div.botones {
-  display: flex;
-  justify-content: space-around;
-}
-
-a#dropdownMenuLink.btn {
-  background-color: white;
-  padding: 8%;
+div.inicio h2 {
+  font-family: "Cookie", cursive;
+  font-size:350%;
   color: #3e403f;
-  border: 2px solid #FFE6FA;
-  font-family: "Inconsolata", sans-serif;
-  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: 400;
+
 }
+
 hr {
   border-top: 2px solid #21252966;
   width: 90%;
   margin: 21px auto;
 }
-div.productos{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
+
 div.producto{
-  overflow: hidden;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
 }
 div.productos button{
   background-color: white;
@@ -95,30 +53,29 @@ div.productos button{
 div.mapa{
   display: none;
 }
-div.info{
-  margin-bottom: 5%;
+
+div.inicio button {
+  background-color: white;
+    color: #3e403f;
+    font-family: "Inconsolata",sans-serif;
+    border: 2px solid #FFD0D9;
+    font-size: 20px;
+    border-radius: 13px 13px;
+    letter-spacing: 2px;
+    padding: 2%;
+    margin-top: 10%;
 }
-div.info button{
-  font-family: "Inconsolata", sans-serif;
-  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
-  margin-top: 5%;
-}
-div.comprar button{
-  font-family: "Inconsolata", sans-serif;
-  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
-  color:
+div.inicio button:hover{
+  background-color: #FFD0D9;
+  color: white;
 }
 div.card{
   border-radius: 13px 13px;
   border:2px solid #E3FDF5;
   padding-bottom: 2%;
-  width: 100%;
   margin: 2%;
-  float: left;
 }
-div.card img{
-  height: 30vh;
-}
+
 div.card p{
   font-family: "Inconsolata", sans-serif;
   font-weight: bold;
@@ -153,32 +110,20 @@ div.producto{
   width: 90%;
   margin: 0 auto;
 }
+
 div.card{
-  width: 20%;
-  float: left;
+width: 30%;
 }
 div.inicio{
-  padding: 0;
-}
-div.info h1{
-  font-size: 250%;
-}
-div.info i{
-  display: none;
-}
-div.info h2{
-  font-size: 100%;
-}
-div.info a{
-  font-size: 97%;
-}
-div.imagen img{
-  width: 45%;
-  border-radius: 51%;
-}
-div.imagen{
-display: block;
-margin-left: -15%;
+  padding:4%;
+  width:100%;
 }
 
+div.imagen{
+  display: block;
+  width: 30%;
+}
+div.imagen img {
+width:60%!important;
+}
 }

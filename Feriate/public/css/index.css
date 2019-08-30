@@ -1,28 +1,7 @@
-a.nav-link {
-  color: white !important;
-  font-family: 'Inconsolata', sans-serif;
-  font-size: 20px
-}
-a.navbar-brand{
-  font-weight: bold;
-  font-family: 'Inconsolata', sans-serif;
-  font-size: 30px;
-}
-button.btn.btn-outline-success{
-  color:#F0386B;
-border: 1px solid #F0386B;
-background-color: white;
-font-weight: bold;
+div.container{
+  width: 90%;
 }
 
-nav a i {
-  color:#FFD0D9 ;
-  font-size: 25px;
-}
-body{
-background: #f5fcfa;
-padding-top: 70px;
-}
 .descripcion {
   text-align: center;
   width: 50%;
@@ -54,8 +33,6 @@ hr {
 }
 
 div.feria {
-  width: 85%;
-  margin: 0 auto;
   -webkit-box-shadow: 10px 11px 12px 0px rgba(0, 0, 0, 0.32);
   -moz-box-shadow: 10px 11px 12px 0px rgba(0, 0, 0, 0.32);
   box-shadow: 10px 11px 12px 0px rgba(0, 0, 0, 0.32);
@@ -138,20 +115,25 @@ div.header-feria h3,h5{
 div.header-feria h5{
   height: 150px;
 }
-main{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+
 div.header-feria img {
     left: 1%;
     top: 47%;
 }
+div.boton-header button:hover {
+  background-color: #FFD0D9;
+}
 div.boton-header button {
   display: block;
-  background-color: #f5d9d5;
+  background-color: white;
   font-family: "Inconsolata", sans-serif;
+    color: black;
+    border: 2px solid #FFD0D9;
+    font-size: 20px;
+    border-radius: 13px 13px;
+    letter-spacing: 2px;
   margin: 0 auto;
+  text-decoration: none;
 }
 
 }

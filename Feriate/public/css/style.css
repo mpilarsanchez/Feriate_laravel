@@ -91,24 +91,10 @@ div.imagen img{
   width: 100%;
   max-height: 200px;
 }
-footer ul li {
-  width: 100%;
-  list-style: none;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 13px;
-  background-color: #FF6978;
-  color: black;
-  margin-top: 1%;
+#dropdown{
+  display: none;
 }
-footer ul {
-  padding-inline-start: 0px;
-   margin-bottom: 0px;
-}
-footer ul li a{
-  color:black !important;
-  text-decoration-style: none;
-}
+
 @media (min-width: 940px){
 body{
   width: 90%;
@@ -150,16 +136,23 @@ article.cat{
   width: 40%;
   float: left;
 }
-footer ul li{
-    width: 19%;
-    float: left;
-    margin: 3% 3%;
-   border-radius: 13px 13px;
-   padding: 1%;
+  #dropdown{
+    display: block;
   }
-  footer ul{
-    padding-bottom: 5%;
-    margin: 0 auto;
-}
+
+  #dropmenu {
+      background-color: #FFD0D9;
+  }
+  #dropitem{
+    font-size: 25px;
+    font-family: "Inconsolata", sans-serif;
+  }
+  #dropitem a{
+    text-decoration: none;
+    color:#F0386B;
+  }
+  #divider{
+      color:#F0386B !important;
+  }
 
 }

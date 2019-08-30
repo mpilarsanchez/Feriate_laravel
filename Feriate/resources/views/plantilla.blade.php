@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Pathway+Gothic+One|Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cookie|Inconsolata&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/14dd9125ec.js"></script>
@@ -24,6 +23,20 @@
           <a class="navbar-brand" href="/index">
               Feriate.com  <i class="fas fa-store"></i>
             </a>
+            <div class="dropdown" id="dropdown" >
+            <a class="nav-link" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Menu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2" id="dropmenu">
+              <button class="dropdown-item" id="dropitem"  type="button"><a href="/donaciones">Donaciones</a></button>
+              <div class="dropdown-divider" id="divider"></div>
+              <button class="dropdown-item" id="dropitem" type="button"><a href = "/quienes_somos">Quienes somos?</a></button>
+              <div class="dropdown-divider" id="divider"></div>
+              <button class="dropdown-item" id="dropitem" type="button"><a href="/contacto">Contacto</a></button>
+              <div class="dropdown-divider" id="divider"></div>
+              <button class="dropdown-item" id="dropitem" type="button"> <a  href="/preguntas">Preguntas Frecuentes</a></button>
+            </div>
+          </div>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             @if(!Auth::check())
@@ -50,13 +63,6 @@
   <section>
     @yield('content')
   </section>
-    <footer>
-      <ul>
-        <a href="/preguntas"><li>PREGUNTAS FRECUENTES</li></a>
-        <a href="/contacto"><li>CONTACTO</li></a>
-        <a href="/quienes_somos"><li>QUIENES SOMOS</li><a/>
-        <a href="/donaciones"><li>DONACIONES</li></a>
-        </ul>
-    </footer>
- </body>
+
+    </body>
 </html>
