@@ -91,6 +91,9 @@ div.imagen img{
   width: 100%;
   max-height: 200px;
 }
+#dropdown{
+  display: none;
+}
 
 @media (min-width: 940px){
 body{
@@ -133,6 +136,23 @@ article.cat{
   width: 40%;
   float: left;
 }
+  #dropdown{
+    display: block;
+  }
 
+  #dropmenu {
+      background-color: #FFD0D9;
+  }
+  #dropitem{
+    font-size: 25px;
+    font-family: "Inconsolata", sans-serif;
+  }
+  #dropitem a{
+    text-decoration: none;
+    color:#F0386B;
+  }
+  #divider{
+      color:#F0386B !important;
+  }
 
 }

@@ -7,26 +7,22 @@ Feria
 @section('content')
 <div class="container">
   <div class="inicio">
-    <div class="imagen">
-      <img src="/images/inicio.jpg" alt="" class="img-thumbnail">
-    </div>
-    <div class="info">
-      <h1>{{$feria["nombre"]}}</h1>
-          {{-- <h4 ><a href="#">Ver Mas Ferias de {{$feria->duenio->getNombreCompleto()}}</a></h4> --}}
-          <h2> Donde?</h2>
-          <p>{{$feria["ubicacion"]}}</p>
-          <h6><a target="_blank" href="https://www.google.com/maps/place/{{$feria['ubicacion']}}" title="Click para ver en el mapa">Ver ubicacion</a> </h6>
-          <h2>Que encontras?</h2>
-          <p>{{$feria["descripcion"]}}<p>
-          <h2>Desde:{{$feria["desde"]}}</h2>
-          <h2>Hasta:{{$feria["hasta"]}}</h2>
-      @if(Auth::check())
-          @if($feria["user_id"] == Auth::user()->id)
-           <a href="/feria/{{$feria["id"]}}/cargarProductos"><button id="boton" type="button" name="button">Cargar Productos</button></a>
-           <a href="/editarFeria/{{$feria["id"]}}"><button id="boton" type="button" name="button" disable>Editar Feria</button></a>
-         @endif
-      @endif
-    </div>
+    <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Bienvenida a la feria {{$feria["nombre"]}} !
+              <p class="lead">{{$feria["descripcion"]}} . Encontrala desde {{$feria["desde"]}} hasta {{$feria["hasta"]}} . Te esperamos! </p>
+            @if(Auth::check())
+                @if($feria["user_id"] == Auth::user()->id)
+                 <a href="/feria/{{$feria["id"]}}/cargarProductos"><button id="boton" type="button" name="button">Cargar Productos</button></a>
+                 <a href="/editarFeria/{{$feria["id"]}}"><button id="boton" type="button" name="button" disable>Editar Feria</button></a>
+               @endif
+            @endif
+
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="img-thumbnail" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/images/inicio.jpg" data-holder-rendered="true" style="width: 300px; height: 300px;">
+          </div>
+        </div>
   </div>
   <hr/>
     @if(empty($feria->productos))
@@ -36,6 +32,7 @@ Feria
   @else
   <main>
     <div class="producto">
+    <div class="d-md-flex justify-content-around">
       @foreach ($feria->productos as $producto)
           <div class="card" >
             @if ($producto['img_nombre'] != '')
@@ -74,5 +71,9 @@ Feria
         @endforeach
       @endif
  </div>
+   </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 @endsection

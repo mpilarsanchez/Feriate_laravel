@@ -24,7 +24,7 @@
           @if(Auth::check())
             <a href="/crearFeria"><button id="boton" type="button" name="button" class="btn btn-dark">Crea tu feria!!!!</button></a>
           @else
-            <a href="/login"><button id="boton" type="button" name="button" class="btn btn-dark">Logueate para Crear tu feria!</button></a>
+            <a href="/login"><button id="boton" type="button" name="button" class="btn btn-dark">Crea tu feria!</button></a>
           @endif;
           <div class="lista">
             <ul>
@@ -52,7 +52,7 @@
             <img src="images/tarjeta-de-credito.png" alt="">
           </div>
           <div class="paga">
-            <h3>probalo y retira en la feria</h3>
+            <h3>retiralo en la feria</h3>
             <img src="images/compras.png" alt="">
           </div>
       <div class="marca">

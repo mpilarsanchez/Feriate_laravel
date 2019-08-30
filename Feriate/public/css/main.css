@@ -30,3 +30,26 @@ a i {
   color:#FFD0D9 ;
   font-size: 25px;
 }
+#dropdown{
+  display: none;
+}
+@media (min-width: 940px){
+  #dropdown{
+    display: block;
+  }
+
+  #dropmenu {
+      background-color: #FFD0D9;
+  }
+  #dropitem{
+    font-size: 25px;
+    font-family: "Inconsolata", sans-serif;
+  }
+  #dropitem a{
+    text-decoration: none;
+    color:#F0386B;
+  }
+  #divider{
+      color:#F0386B !important;
+  }
+}

@@ -1,44 +1,26 @@
 @extends('plantilla')
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/feria.css">
-<link rel="stylesheet" href="/css/productos.css">
-<link rel="stylesheet" href="/css/footer.css">
+
 @section('titulo')
 Productos
 @endsection
 @section('content')
   <div class="container">
     <div class="inicio">
-        <h1>Productos</h1>
-    </div>
-     @if(!$datosProductos->isEmpty())
-  <div class="botones">
-    <div class="dropdown">
-      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        ORDENAR POR
-      </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        FILTRAR POR
-      </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div>
-  </div>
-@endif
+          <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading my-5">Estas viendo {categoria}</h2>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/images/donar1.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">
+          </div>
+        </div>
+        </div>
   <hr>
  @if($datosProductos->isEmpty())
      <div class="alert alert-danger" role="alert">
-    @if(isset($busqueda) && $busqueda != '')   
+    @if(isset($busqueda) && $busqueda != '')
         <p>Lo Sentimos No Hay Productos para la Busqueda {{ $busqueda }}</p>
     @else
         <p>Lo Sentimos No Hay Productos para la Categoria seleccionada</p>
@@ -74,4 +56,7 @@ Productos
 {{$datosProductos->links()}}
 </div>
 @endif
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 @endsection
