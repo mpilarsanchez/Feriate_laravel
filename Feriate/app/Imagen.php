@@ -13,4 +13,8 @@ class Imagen extends Model
     public function feria(){
       return $this->belongsTo("App\Feria", "feria_id");
     }
+
+    public function user(){
+      return $this->belongsTo("App\User", "user_id");
+    }
 }

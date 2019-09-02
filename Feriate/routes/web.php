@@ -44,10 +44,9 @@ Route::get('/home',function(){
    });
    Route::get('/misFerias', 'FeriasController@misFerias');
 
-   Route::get('/editarPerfil', function () {
-       return 'aca va editar perfil usuario';
-   });
-
+   Route::get("/editarPerfil/{id}", "UsersController@editUsuario");
+   Route::put("/guardarPerfil/{id}", "UsersController@update");
+   Route::delete("/borrarUsuario/{id}", "UsersController@borrar");
  });
 
  Route::post('/search', 'ProductosController@search');
