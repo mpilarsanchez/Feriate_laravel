@@ -7,7 +7,7 @@ USE feriate;
     `apellido` varchar(45) NOT NULL,
     `email` varchar(45) NOT NULL,
     `password` varchar(100) NOT NULL,
-    `tel` int(11) DEFAULT NULL,
+    `tel` bigint(100) DEFAULT NULL,
     `direccion` varchar(100) DEFAULT NULL,
     `localidad` varchar(45) DEFAULT NULL,
     `pais` int(11) DEFAULT NULL,
