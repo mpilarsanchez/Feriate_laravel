@@ -10,12 +10,15 @@ Productos
     <div class="inicio">
           <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading my-5">Estas viendo {categoria}</h2>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/images/donar1.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">
-          </div>
-        </div>
+            <?php // IDEA: ACA IRIA EL NOMBRE DE LA CATEGORIA ?>
+              <h2 class="featurette-heading my-5">Estas viendo {producto}</h2>
+              </div>
+              <div class="col-md-5 order-md-1">
+                  <?php // IDEA: ACA IRIA LA IMAGEN DE LA CATEGORIA ?>
+                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/images/donar1.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">
+              </div>
+
+      </div>
         </div>
   <hr>
  @if($datosProductos->isEmpty())
@@ -42,13 +45,13 @@ Productos
             <div class="comprar">
                 @if(Auth::check())
                   @if(!$producto["user_id"] == Auth::user()->id)
-                    <a href="/carrito"> <button type="button" name="button"><i class="fas fa-shopping-cart"></i>  Agregar al carrito!</a></button>
-                    <button type="button" name="button"><i class="fas fa-tag"></i>  Reserva este articulo!</button>
+                    <a href="/carrito"> <button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-shopping-cart"></i>  Agregar al carrito!</a></button>
+                    <button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  Reserva este articulo!</button>
                  @endif
                  @else
-                      <a href="login.php"><button type="button" name="button"><i class="fas fa-tag"></i>  Logueate para comprar</a></button>
+                      <a href="login.php"><button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i> Comprar</a></button>
                 @endif
-              <a href="/feria/{{ $producto['feria_id'] }}" ><button type="button" name="button"><i class="fas fa-tag"></i>  Ir a esta feria</a></button>
+              <a href="/feria/{{ $producto['feria_id'] }}" ><button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  Ir a esta feria</a></button>
             </div>
           </div>
         </div>
