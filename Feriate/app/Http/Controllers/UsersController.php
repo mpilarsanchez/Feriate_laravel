@@ -18,8 +18,11 @@ class UsersController extends Controller
   }
 
   public function traerUsuario(){
-    $usuario = User::find( Auth::user()->id);
-    $vac = compact("usuario");
+    $usuario = User::find (Auth::user()->id);
+    $usuarioImagen = Imagen::where('user_id', '=' , Auth::user()->id)
+    ->get()
+    ->first();
+    $vac = compact("usuario", "usuarioImagen");
     return view("perfil", $vac);
   }
 
