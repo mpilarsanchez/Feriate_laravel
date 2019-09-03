@@ -10,7 +10,7 @@ Productos
     <div class="inicio">
           <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading my-5">Estas viendo {categoria}</h2>
+            <h2 class="featurette-heading my-5">Estas viendo {{$categoria}}</h2>
           </div>
           <div class="col-md-5 order-md-1">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/images/donar1.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">
@@ -31,7 +31,7 @@ Productos
     <div class="producto">
       @foreach ($datosProductos as $producto)
           <div class="card" >
-          <img src="images/shoes.jpg" class="card-img-top" alt="...">
+          <img src="/storage/{{ $producto->imagen[0]['nombre']}}" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">{{ $producto['nombre']}}</p>
             <div class="descripcion">

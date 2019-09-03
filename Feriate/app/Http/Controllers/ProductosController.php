@@ -145,7 +145,8 @@ public function cargar(Request $req){
      $datosCategorias = Categoria::where('cat_nombre', $categoria)->first();
      $categoriaId = $datosCategorias['cat_id'];
      $datosProductos = Producto::where('categoria_id', $categoriaId)->paginate(1);
-     $vac = compact("datosProductos");
+     $categoria = $categoria;
+     $vac = compact("datosProductos","categoria");
      return view("productos", $vac);
 
  }

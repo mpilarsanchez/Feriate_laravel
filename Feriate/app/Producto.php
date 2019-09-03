@@ -22,7 +22,7 @@ public function categoria(){
 }
 
 //relacion Producto/Imagenes : una feria tiene muchas imagenes
-  public function imagenes(){
+  public function imagen(){
     return $this->hasMany("App\Imagen", "producto_id");
   }
 

@@ -12,7 +12,7 @@ class Feria extends Model
 
 
 //relacion Feria/Imagenes : una feria tiene muchas imagenes
-  public function imagenes(){
+  public function imagen(){
     return $this->hasMany("App\Imagen", "feria_id");
   }
 

@@ -110,12 +110,20 @@ Carga tus Productos
     </div>
      <button type="submit" class="btn btn-outline-light btn btn-lg btn-block mt-3" id="boton">Actualizar!</button>
     </form>
-    <form class="" action="/borrarProducto/{{$productoEdit['id']}}" method="post" onsubmit="eliminar()">
+    <form class="" action="/borrarProducto/{{$productoEdit['id']}}" method="post" id="eliminarproducto">
       {{method_field('delete')}}
       {{csrf_field()}}
-      <button type="submit" class="btn btn-outline-light btn btn-lg btn-block mt-3" id="boton" >Borrar</button>
+      <button type="submit" class="btn btn-outline-light btn btn-lg btn-block mt-3" id="eliminar" >Borrar</button>
       <input type="hidden" name="" value="{{$productoEdit['feria_id']}}">
     </form>
 </main>
+<div id="dialog-confirm" title="Eliminar Usuario?" style="display:none">
+  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Esta seguro que desea eliminar Este Producto?</p>
+</div>
 </div>
 @endsection
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+<script src="/js/productos.js"></script>
