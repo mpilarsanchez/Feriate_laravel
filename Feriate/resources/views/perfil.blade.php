@@ -8,7 +8,7 @@ Perfil
   <main>
     <div class="info">
           <div class="img">
-            @if ($usuario->imagen[0]['nombre'] == '')
+            @if ($usuarioImagen == null)
               <img src="/images/userdefault.jpg" alt="" class="img-thumbnail">
             @else
               <img src="storage/{{$usuario->imagen[0]['nombre']}}" alt="img-thumbnail">
