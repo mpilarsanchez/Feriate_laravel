@@ -20,7 +20,7 @@ Feria
 
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="img-thumbnail" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/images/inicio.jpg" data-holder-rendered="true" style="width: 300px; height: 300px;">
+            <img class="img-thumbnail" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/storage/{{$feria->imagen[0]["nombre"]}}" data-holder-rendered="true" style="width: 300px; height: 300px;">
           </div>
         </div>
   </div>
@@ -35,11 +35,10 @@ Feria
     <div class="d-md-flex justify-content-around">
       @foreach ($feria->productos as $producto)
           <div class="card" >
-            @if ($producto['img_nombre'] != '')
-          <img src="img_user/{{ $producto['nombre'] }}" class="card-img-top" alt="...">
-             @endif
-          @if ($producto['img_nombre'] == '')
-          <img src="img_user/ropa2.jpg" class="card-img-top" alt="...">
+            @if ($producto->imagen[0]['nombre'] == '')
+            <img src="img_user/ropa2.jpg" class="card-img-top" alt="...">
+        @else
+          <img src="/storage/{{ $producto->imagen[0]['nombre'] }}" class="card-img-top" alt="...">
            @endif
           <div class="card-body">
             <h4 class="card-text">{{ $producto['nombre']}}</h4>

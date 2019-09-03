@@ -40,7 +40,7 @@ Route::get('/home',function(){
    Route::delete('/borrarProducto/{id}','ProductosController@borrar');
    Route::get('/editarProducto/{id}','ProductosController@edit');
    Route::get('/carrito', function () {
-       return 'aca va el carrito';
+       return view('carrito');
    });
    Route::get('/misFerias', 'FeriasController@misFerias');
 
