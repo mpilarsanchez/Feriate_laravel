@@ -84,18 +84,18 @@ CONSTRAINT `user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='\n';
 
 
--- //desde aca ir revisando y creando las tablas nooooo usarr!!!!!
-  CREATE TABLE `carrito` (
-    `carr_id` int(11) NOT NULL AUTO_INCREMENT,
-    `carr_pr_id` int(11) NOT NULL,
-    `carr_us_id` int(11) NOT NULL,
-    PRIMARY KEY (`carr_id`),
-    KEY `carr_us_id` (`carr_us_id`),
-    KEY `carr_pr_id` (`carr_pr_id`),
-    CONSTRAINT `carr_pr_id` FOREIGN KEY (`carr_pr_id`) REFERENCES `productos` (`pr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-    CONSTRAINT `carr_us_id` FOREIGN KEY (`carr_us_id`) REFERENCES `usuarios` (`us_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE `carrito` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `producto_id` int(11) NOT NULL,
+    `user_id` int(11) NOT NULL,
+    PRIMARY KEY (`id`),
+    KEY `carr_us_id` (`user_id`),
+    KEY `carr_pr_id` (`producto_id`),
+    CONSTRAINT `carr_pr_id` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT `carr_us_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+  -- //desde aca ir revisando y creando las tablas nooooo usarr!!!!!
 
   CREATE TABLE `comentarios` (
     `com_id` int(11) NOT NULL AUTO_INCREMENT,
