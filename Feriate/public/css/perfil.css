@@ -13,10 +13,11 @@ div.datos{
   font-weight: bold;
   width: 50%;
 }
-h2{
+div.datos h2{
   margin-top: -3%;
+  font-family: "Cookie",cursive;
+  font-size: 250%;
   font-weight: bold;
-  font-family: "Playfair display",sans-serif;
   padding: 1%;
 }
 i{
@@ -38,9 +39,7 @@ h1{
   text-align: center;
   margin-top: 4%;
 }
-h4{
-  width: 100%;
-}
+
 button{
   background-color: white;
   font-family: "Oswald", monospace;
@@ -89,7 +88,7 @@ div.img{
 display: none;
 }
 h4{
-  width: 100%;
+  width: 200%;
   font-size: 100%;
 }
 div.datos{

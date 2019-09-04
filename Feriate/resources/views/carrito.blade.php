@@ -14,58 +14,14 @@ Carrito
     </div>
   <hr>
 <div class="productos">
+
   <div class="card" >
-  <img src="images/shoes.jpg" class="card-img-top" alt="...">
+  <img src="images/reloj.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">Zapatos Prune sin uso</p>
+    <h3 class="card-text">Reloj nuevo sin uso</h3>
     <div class="descripcion">
-      <h3 class="precio"><b>$950</b></h3>
-      <h3 class="talle"><b>Talle 39</b></h3>
-    </div>
-    <div class="comprar">
-  <button type="button" class="btn btn-light" name="button"> <i class="fas fa-shopping-cart"></i> <a href="carrito">COMPRAR</a></button>
-  <button type="button" name="button" class="btn btn-light"><i class="fas fa-tag"></i>  Quitar del carrito</button>
-  <a class="ver_mas" href="#">  Ver más del vendedor</a>
-    </div>
-  </div>
-</div>
-  <div class="card" >
-  <img src="images/shoes.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Reloj nuevo sin uso</p>
-    <div class="descripcion">
-      <h3 class="precio"><b>$950</b></h3>
-      <h3 class="talle"><b>Talle S</b></h3>
-    </div>
-    <div class="comprar">
-      <button type="button" name="button"> <i class="fas fa-shopping-cart"></i> <a href="carrito">COMPRAR</a></button>
-      <button type="button" name="button"><i class="fas fa-tag"></i>  Quitar del carrito</button>
-      <a class="ver_mas" href="#">  Ver más del vendedor</a>
-    </div>
-  </div>
-</div>
-  <div class="card" >
-  <img src="images/shoes.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Reloj nuevo sin uso</p>
-    <div class="descripcion">
-      <h3 class="precio"><b>$950</b></h3>
-      <h3 class="talle"><b>Talle S</b></h3>
-    </div>
-    <div class="comprar">
-      <button type="button" name="button"> <i class="fas fa-shopping-cart"></i> <a href="carrito">COMPRAR</a></button>
-      <button type="button" name="button"><i class="fas fa-tag"></i>  Quitar del carrito</button>
-      <a class="ver_mas" href="#">  Ver más del vendedor</a>
-    </div>
-  </div>
-</div>
-  <div class="card" >
-  <img src="images/shoes.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Reloj nuevo sin uso</p>
-    <div class="descripcion">
-      <h3 class="precio"><b>$950</b></h3>
-      <h3 class="talle"><b>Talle S</b></h3>
+      <h5 class="precio"><b>$950</b></h5>
+      <h5 class="talle"><b>Talle S</b></h5>
     </div>
     <div class="comprar">
       <button type="button" name="button"> <i class="fas fa-shopping-cart"></i> <a href="carrito">COMPRAR</a></button>
@@ -77,25 +33,10 @@ Carrito
   <div class="card" >
   <img src="images/reloj.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">Reloj nuevo sin uso</p>
+    <h3 class="card-text">Reloj nuevo sin uso</h3>
     <div class="descripcion">
-      <h3 class="precio"><b>$950</b></h3>
-      <h3 class="talle"><b>Talle S</b></h3>
-    </div>
-    <div class="comprar">
-      <button type="button" name="button"> <i class="fas fa-shopping-cart"></i> <a href="carrito">COMPRAR</a></button>
-      <button type="button" name="button"><i class="fas fa-tag"></i>  Quitar del carrito</button>
-      <a class="ver_mas" href="#">  Ver más del vendedor</a>
-    </div>
-  </div>
-</div>
-  <div class="card" >
-  <img src="images/reloj.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Reloj nuevo sin uso</p>
-    <div class="descripcion">
-      <h3 class="precio"><b>$950</b></h3>
-      <h3 class="talle"><b>Talle S</b></h3>
+      <h5 class="precio"><b>$950</b></h5>
+      <h5 class="talle"><b>Talle S</b></h5>
     </div>
     <div class="comprar">
       <button type="button" name="button"> <i class="fas fa-shopping-cart"></i> <a href="carrito">COMPRAR</a></button>

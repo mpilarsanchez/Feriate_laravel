@@ -17,7 +17,7 @@ class FeriasController extends Controller
 
        $datosCategorias = Categoria::where('cat_nombre', $categoria)->first();
        $categoriaId = $datosCategorias['cat_id'];
-       $datosFerias = Feria::paginate(3);
+       $datosFerias = Feria::paginate(6);
        $vac = compact("datosFerias");
        return view("ferias", $vac);
 
