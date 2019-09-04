@@ -26,8 +26,11 @@ class FeriasController extends Controller
    public function misFerias()
    {
 
-     $datosFerias = Feria::where('user_id',Auth::user()->id )->paginate(1);
-     $vac = compact("datosFerias");
+     $datosFerias = Feria::where('user_id',Auth::user()->id)->paginate(4);
+     $ImagenFeria = Imagen::where('feria_id', '=' , Auth::user()->id)
+     ->get()
+     ->first();
+     $vac = compact("datosFerias", "ImagenFeria");
      return view("misFerias", $vac);
 
   }
@@ -81,7 +84,10 @@ class FeriasController extends Controller
 
     public function traerFeria($id){
       $feria = Feria::find($id);
-      $vac = compact("feria");
+      $ImagenFeria = Imagen::where('feria_id', '=' ,$id)
+      ->get()
+      ->first();
+      $vac = compact("feria", "ImagenFeria");
       return view("/feria", $vac);
     }
 
