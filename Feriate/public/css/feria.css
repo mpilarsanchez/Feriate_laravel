@@ -37,18 +37,20 @@ hr {
   width: 90%;
   margin: 21px auto;
 }
-
+div.card-body{
+  text-align: center;
+}
 div.producto{
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
 }
-div.productos button{
+div.comprar button{
   background-color: white;
+  font-family: 'Inconsolata', sans-serif;
+  border-radius: 13px 13px;
   padding: 2%;
-  color:#3e403f;;
-  border: 2px solid white;
-  font-family: "Inconsolata", sans-serif;
-  margin: 0 auto;
+  border: 2px solid #F0386B;
+color:#132743!important;
 }
 div.mapa{
   display: none;
@@ -72,9 +74,9 @@ div.inicio button:hover{
 div.card{
   border-radius: 13px 13px;
   border:2px solid #E3FDF5;
-  padding-bottom: 2%;
   margin: 2%;
 }
+
 
 div.card p{
   font-family: "Inconsolata", sans-serif;
@@ -83,19 +85,21 @@ div.card p{
   text-align: center;
 }
 div.card h3{
-  font-family: "Inconsolata", sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
-  font-size: 100%;
+  color:#407088;
+  font-size: 130%;
   text-align: center;
 }
-div.card h4{
-  display: block;
+div.card h5{
   width: 100%;
-  font-family: "Inconsolata", sans-serif;
-  font-weight: bold;
-  font-size: 120%;
-  text-align: center;
+  margin: 4px auto;
+  color: #132743;
+  font-weight: normal;
+  font-size: 100%;
+  font-family: "Inconsolata",sans-serif;
 }
+
 
 div.comprar{
   text-align: center;
@@ -113,6 +117,10 @@ div.producto{
 
 div.card{
 width: 30%;
+}
+div.card img{
+  height: 190px;
+  width: 100%;
 }
 div.inicio{
   padding:4%;

@@ -28,31 +28,34 @@ Productos
      </div>
   @else
   <main>
-    <div class="producto">
+    <div class="row d-md-flex justify-content-around">
       @foreach ($datosProductos as $producto)
-          <div class="card" >
+
+          <div class="card col-md-4 col-lg-3"" >
           <img src="/storage/{{ $producto->imagen[0]['nombre']}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">{{ $producto['nombre']}}</p>
-            <div class="descripcion">
-              <h3 class="precio"><b>Precio: {{ $producto['precio'] }}</b></h3>
-              <h3 class="talle"><b>Talle 39</b></h3>
-              <h3 class="cantidad"><b>cantidad:{{ $producto['cantidad'] }}</b></h3>
+            <h3 class="card-text">{{ $producto['nombre']}}</h3>
+            <div class="descripcion mt-4">
+              <h5 class="precio"><b>Precio: {{ $producto['precio'] }}</b></h5>
+              <h5 class="talle"><b>Talle 39</b></h5>
+              <h5 class="cantidad"><b>cantidad:{{ $producto['cantidad'] }}</b></h5>
             </div>
             <div class="comprar">
                 @if(Auth::check())
                   @if(!$producto["user_id"] == Auth::user()->id)
-                    <a href="/carrito"> <button type="button" name="button"><i class="fas fa-shopping-cart"></i>  Agregar al carrito!</a></button>
-                    <button type="button" name="button"><i class="fas fa-tag"></i>  Reserva este articulo!</button>
+                    <a href="/carrito"> <button type="button" name="button" class="mt-4"> Agregar al carrito!</a></button>
+                    <button type="button" name="button" class="mt-4">Reserva este articulo!</button>
                  @endif
                  @else
-                      <a href="login.php"><button type="button" name="button"><i class="fas fa-tag"></i>  Logueate para comprar</a></button>
+                      <a href="login.php"><button type="button" class="mt-4" name="button">  Logueate para comprar</a></button>
                 @endif
-              <a href="/feria/{{ $producto['feria_id'] }}" ><button type="button" name="button"><i class="fas fa-tag"></i>  Ir a esta feria</a></button>
+              <a href="/feria/{{ $producto['feria_id'] }}" ><button type="button" class="mt-4" name="button"> Ir a esta feria</a></button>
             </div>
           </div>
         </div>
+
 @endforeach
+
 {{$datosProductos->links()}}
 </div>
 @endif

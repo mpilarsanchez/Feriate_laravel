@@ -3,6 +3,7 @@ div.carrito {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
 }
 div.inicie{
   width: 30% ;
@@ -16,7 +17,7 @@ img.imagen_carrito {
     margin-right: 20%;
 }
 div.inicie h1{
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Inconsolata", sans-serif;
   font-weight: bold;
   padding-top: 4%;
   font-size: 215%;

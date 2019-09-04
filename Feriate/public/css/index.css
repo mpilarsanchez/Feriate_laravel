@@ -1,139 +1,63 @@
-div.container{
-  width: 90%;
-}
-
-.descripcion {
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-}
-div.inicio {
-  width: 90%;
-  margin: 21px auto;
-  text-align: center;
-}
-div.inicio h1 {
-font-family: 'Inconsolata', sans-serif;
-font-weight: bold;
-font-size: 350%;
-color: #3e403f;
-}
-div.inicio h2 {
-font-family: "Inconsolata", sans-serif;
-width: 80%;
-margin: 0 auto;
-font-size: 94%;
-font-weight: bold;
-color: #3e403f;
-}
-hr {
-  border-top: 2px solid #21252966;
-  width: 90%;
-  margin: 25px auto;
-}
 
 div.feria {
   -webkit-box-shadow: 10px 11px 12px 0px rgba(0, 0, 0, 0.32);
   -moz-box-shadow: 10px 11px 12px 0px rgba(0, 0, 0, 0.32);
   box-shadow: 10px 11px 12px 0px rgba(0, 0, 0, 0.32);
-  margin-bottom: 5%;
-}
+margin:1%;
+padding-right: 0;
+padding-left: 0;
+background-color: white;
 
+}
+div.boton-header button:hover{
+    background-color: #F0386B;
+    color:white;
+}
+div.boton-header button{
+  background-color: white;
+  font-family: 'Inconsolata', sans-serif;
+  border-radius: 13px 13px;
+  padding: 2%;
+  border: 2px solid #F0386B;
+color:#132743!important;
+}
 div.header-feria {
-  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
-  width: 100%;
+  background-color: white;
   text-align: center;
-  position: relative;
   padding-bottom: 2%;
   margin-bottom: 2%;
 }
-
-div.header-feria i {
-  position: absolute;
-  color: white;
-  font-size: 50px;
-  left: 62%;
-  top: 22%;
-}
-
-div.boton-header button {
-  display: none;
+div.descripcion {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 2%;
 }
 
 div.header-feria h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
   padding-top: 4%;
-  color: #3e403f;
+  font-size: 250%;
+  color:#407088;
+  text-align: center;
 }
 div.header-feria h5{
-  width: 40%;
+width: 90%;
 margin: 0 auto;
-color: #3e403f;
-}
-div.header-feria img {
-  width: 33%;
-  border-radius: 51%;
-  position: absolute;
-  left: -2%;
-  top: 42%;
+color: #132743;
+font-weight: normal;
+font-family: "Inconsolata",sans-serif;
 }
 
-div.cuerpo-feria {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 5%;
-}
-
-div.botones {
-  display: flex;
-  justify-content: space-around;
-}
-a#dropdownMenuLink.btn {
-  padding: 4%;
-  color: #3e403f;
-  border: 2px solid #3e403f;
-  font-family: "Inconsolata", sans-serif;
-  background-color: #FFE6FA;
-}
 div.cuerpo-feria img {
-  height: 140px;
-  padding-bottom: 1%;
-  border-radius: 13px 13px 13px 13px;
-  width: 45%;
+  width: 100%;
+}
+div.cuerpo-feria{
+  width: 100%;
 }
 @media (min-width: 940px){
-div.container{
-  width: 90%;
-}
-div.feria{
-  width: 30%;
-}
-div.header-feria h3,h5{
-  padding: 3%;
-}
-div.header-feria h5{
-  height: 150px;
-}
 
-div.header-feria img {
-    left: 1%;
-    top: 47%;
-}
-div.boton-header button:hover {
-  background-color: #FFD0D9;
-}
-div.boton-header button {
-  display: block;
-  background-color: white;
-  font-family: "Inconsolata", sans-serif;
-    color: black;
-    border: 2px solid #FFD0D9;
-    font-size: 20px;
-    border-radius: 13px 13px;
-    letter-spacing: 2px;
-  margin: 0 auto;
-  text-decoration: none;
-}
+
 
 }

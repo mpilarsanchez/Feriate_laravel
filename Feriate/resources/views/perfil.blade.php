@@ -16,7 +16,7 @@ Perfil
    </div>
     <div class="datos">
         <h1>@if((Auth::check()))
-          <h2 class="title">Bienvenido {{$usuario->nombre}}</h2>
+          <h2 class="title">Bienvenid@ {{$usuario->nombre}}</h2>
             @endif</h1>
             @if ((Auth::check()))
               <h4>{{$usuario->email}}</h4>
