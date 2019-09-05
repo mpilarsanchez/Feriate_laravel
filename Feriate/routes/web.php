@@ -39,14 +39,15 @@ Route::get('/home',function(){
    Route::put('/editarProductos/{id}','ProductosController@update');
    Route::delete('/borrarProducto/{id}','ProductosController@borrar');
    Route::get('/editarProducto/{id}','ProductosController@edit');
-   Route::get('/carrito', function () {
-       return view('carrito');
-   });
+   Route::get('/carrito', 'CarritoController@cargarCarrito');
    Route::get('/misFerias', 'FeriasController@misFerias');
 
    Route::get("/editarPerfil/{id}", "UsersController@editUsuario");
    Route::put("/guardarPerfil/{id}", "UsersController@update");
    Route::delete("/borrarUsuario/{id}", "UsersController@borrar");
+   Route::post("/agregarCarrito", "CarritoController@agregar");
+  Route::post("/quitarCarrito", "CarritoController@quitar");
+
  });
 
  Route::post('/search', 'ProductosController@search');
