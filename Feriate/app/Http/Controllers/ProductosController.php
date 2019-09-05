@@ -157,4 +157,6 @@ public function cargar(Request $req){
       $vac = compact("datosProductos", "busqueda");
       return view("productos", $vac);
  }
+
+ 
 }

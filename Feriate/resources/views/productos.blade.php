@@ -31,7 +31,7 @@ Productos
     <div class="row d-md-flex justify-content-around">
       @foreach ($datosProductos as $producto)
 
-          <div class="card col-md-4 col-lg-3"" >
+          <div class="card col-md-4 col-lg-3" >
           <img src="/storage/{{ $producto->imagen[0]['nombre']}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h3 class="card-text">{{ $producto['nombre']}}</h3>
@@ -42,8 +42,12 @@ Productos
             </div>
             <div class="comprar">
                 @if(Auth::check())
-                  @if(!$producto["user_id"] == Auth::user()->id)
-                    <a href="/carrito"> <button type="button" name="button" class="mt-4"> Agregar al carrito!</a></button>
+                  @if($producto["user_id"] != Auth::user()->id)
+                     <form class="" action="/agregarCarrito" method="post">
+                       @csrf
+                       <input type="hidden" name="id" value="{{$producto['id']}}">
+                       <button type="submit" class="mt-4"> Agregar al carrito!</button>
+                     </form>
                     <button type="button" name="button" class="mt-4">Reserva este articulo!</button>
                  @endif
                  @else
