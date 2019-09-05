@@ -46,7 +46,7 @@ Route::get('/home',function(){
    Route::put("/guardarPerfil/{id}", "UsersController@update");
    Route::delete("/borrarUsuario/{id}", "UsersController@borrar");
    Route::post("/agregarCarrito", "CarritoController@agregar");
-  Route::post("/quitarCarrito", "CarritoController@quitar");
+   Route::post("/quitarCarrito", "CarritoController@quitar");
 
  });
 

@@ -38,7 +38,8 @@ class CarritoController extends Controller
   public function quitar(Request $req){
        $producto = Carrito::where('user_id',Auth::user()->id)
                    -> where('producto_id', $req["id"] )
-                   ->get();
+                   ->get()
+                   ->first();
        $producto->delete();
       return redirect ("carrito");
   }
