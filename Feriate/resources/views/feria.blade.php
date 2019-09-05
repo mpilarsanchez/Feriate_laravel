@@ -21,7 +21,6 @@ Feria
           </div>
           <div class="col-md-5 order-md-1">
             @if($ImagenFeria == null)
-              <img src="/images/logo_feriate_deffault.png" alt="">
               <img src="/images/logo_feriate_deffault_ii.png" alt="">
             @else
             <img class="img-thumbnail" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/storage/{{$feria->imagen[0]["nombre"]}}" data-holder-rendered="true" style="width: 300px; height: 300px;">
@@ -65,8 +64,10 @@ Feria
               @if($feria["user_id"] == Auth::user()->id)
                <a href="/editarProducto/{{$producto['id']}}"><button id="boton"  type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  Editar Producto</button></a>
              @else
-               <form class="" action="/agregarCarrito/{{$producto['id']}}" method="post">
-                 <a href="carrito"><button type="button" name="button" class="btn btn-light m-2"><i class="fas fa-shopping-cart"></i>  Agregar al carrito!</button></a>
+               <form class="" action="/agregarCarrito" method="post">
+                 @csrf
+                 <input type="hidden" name="id" value="{{$producto['id']}}">
+                 <button type="submit" name="button" class="btn btn-light m-2"><i class="fas fa-shopping-cart"></i>  Agregar al carrito!</button>
                </form>
                @endif
             @else
