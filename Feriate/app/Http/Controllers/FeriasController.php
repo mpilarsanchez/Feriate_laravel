@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Feria;
 use App\Imagen;
 use App\Categoria;
+use App\Producto;
 use Auth;
 
 
@@ -97,7 +98,9 @@ class FeriasController extends Controller
 
     public function edit($id){
      $feriaEdit = Feria::find($id);
-     $vac = compact("feriaEdit");
+     $datos_productos = Producto::where('feria_id',$id)
+     ->get();
+     $vac = compact("feriaEdit", "datos_productos");
     return view("editarFeria", $vac);
     }
 
