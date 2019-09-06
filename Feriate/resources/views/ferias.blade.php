@@ -22,7 +22,7 @@ Ferias por categoria
                <img src="/images/logo_feriate_deffault_ii.png" alt="">
             @endif
           </div>
-          <div class="header-feria">
+          <div class="header-feria mt-3">
              <h5><a target="_blank" href="https://www.google.com/maps/place/{{$feria["ubicacion"]}}"><i class="fas fa-map-marker-alt"></i> <a/>  {{$feria["ubicacion"]}}</h5>
             <h3>{{$feria["nombre"]}}</h3>
 
@@ -31,10 +31,11 @@ Ferias por categoria
           <div class="descripcion">
             <h5>{{$feria["descripcion"]}}</h5>
           </div>
+          </div>
           <div class="boton-header">
-            <a href="/feria/{{$feria["id"]}}" ><button class="btn btn-light mt-3" type="button" name="button">Ver feria!</button></a>
+            <a href="/feria/{{$feria["id"]}}" ><button class="btn btn-light mt-3 mb-3" type="button" name="button">Ver feria!</button></a>
           </div>
-          </div>
+
 
         </div>
        @endforeach

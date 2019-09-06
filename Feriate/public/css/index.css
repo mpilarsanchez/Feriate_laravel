@@ -10,16 +10,23 @@ background-color: white;
 
 }
 div.boton-header button:hover{
-    background-color: #F0386B;
+    background-color: #ff6f8d;
     color:white;
 }
 div.boton-header button{
   background-color: white;
+  display: block;
+  margin: 0 auto;
   font-family: 'Inconsolata', sans-serif;
-  border-radius: 13px 13px;
   padding: 2%;
-  border: 2px solid #F0386B;
+  border: 2px solid #ff6f8d;
 color:#132743!important;
+}
+div.boton-header a{
+  text-decoration: none;
+}
+div.header-feria i{
+  color:#ff6f8d;
 }
 div.header-feria {
   background-color: white;
@@ -29,7 +36,7 @@ div.header-feria {
 }
 div.descripcion {
   text-align: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 2%;
 }
@@ -57,7 +64,10 @@ div.cuerpo-feria{
   width: 100%;
 }
 @media (min-width: 940px){
-
-
-
+div.cuerpo-feria img{
+height: 150px;
+}
+div.header-feria{
+  height: 150px;
+}
 }

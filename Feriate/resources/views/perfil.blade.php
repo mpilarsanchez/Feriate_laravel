@@ -19,9 +19,9 @@ Perfil
           <h2 class="title">Bienvenid@ {{$usuario->nombre}}</h2>
             @endif</h1>
             @if ((Auth::check()))
-              <h4>{{$usuario->email}}</h4>
+              <h6>{{$usuario->email}}</h6>
             @endif
-            <h6>Usuario activo desde {{$usuario->created_at}}</h4></h6>
+            <h6>Usuario activo desde {{$usuario->created_at}}</h6>
         <button  type="button" name="button"><a href="/editarPerfil/{{$usuario->id}}">Editar informacion</a>  <i class="fas fa-user-edit"></i></button>
      </div>
     </div>

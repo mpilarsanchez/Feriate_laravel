@@ -7,16 +7,8 @@ Productos
 @endsection
 @section('content')
   <div class="container">
-    <div class="inicio">
-          <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading my-5">Estas viendo {{$categoria}}</h2>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/images/donar1.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">
-          </div>
-        </div>
-        </div>
+<h2 id="titulo" class="mt-3">Estas viendo categoria / {{$categoria}}</h2>
+
   <hr>
  @if($datosProductos->isEmpty())
      <div class="alert alert-danger" role="alert">

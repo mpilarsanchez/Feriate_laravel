@@ -7,7 +7,7 @@ div.img img{
 div.img{
 width: 30%;
 }
-div.datos{
+div.datos {
   text-align: center;
   font-family: 'Inconsolata', sans-serif;
   font-weight: bold;
@@ -15,9 +15,10 @@ div.datos{
 }
 div.datos h2{
   margin-top: -3%;
-  font-family: "Cookie",cursive;
+  font-family:'Inconsolata', sans-serif;
   font-size: 250%;
   font-weight: bold;
+  letter-spacing: 1px;
   padding: 1%;
 }
 i{

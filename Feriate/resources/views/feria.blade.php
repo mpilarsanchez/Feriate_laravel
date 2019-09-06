@@ -8,10 +8,12 @@ Feria
 <div class="container">
   <div class="inicio">
     <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Bienvenida a la feria {{$feria["nombre"]}} !
-              <p class="lead">{{$feria["descripcion"]}} . Encontrala desde {{$feria["desde"]}} hasta {{$feria["hasta"]}} . Te esperamos! </p>
-              <p class="lead"><a target="_blank" href="https://www.google.com/maps/place/{{$feria["ubicacion"]}}"><i class="fas fa-map-marker-alt"></i> <a/>  {{$feria["ubicacion"]}}</p>
+          <div class="col-md-6 order-md-2">
+            <h2 class="featurette-heading">Bienvenida a la feria {{$feria["nombre"]}} !</h2>
+              <p class="lead">{{$feria["descripcion"]}}</p> <p><i class="fas fa-calendar-alt"></i> {{$feria["desde"]}} / {{$feria["hasta"]}} </p>
+                 <p class="lead"><a target="_blank" href="https://www.google.com/maps/place/{{$feria["ubicacion"]}}"><i class="fas fa-map-marker-alt"></i> <a/>  {{$feria["ubicacion"]}}</p>
+              <p> Te esperamos! </p>
+
             @if(Auth::check())
                 @if($feria["user_id"] == Auth::user()->id)
                  <a href="/feria/{{$feria["id"]}}/cargarProductos"><button id="boton" type="button" name="button">Cargar Productos</button></a>

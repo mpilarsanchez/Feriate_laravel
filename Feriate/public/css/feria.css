@@ -4,6 +4,14 @@ div.container{
 header {
   width: 100%;
 }
+h2#titulo{
+  font-family: "Inconsolata", sans-serif;
+  font-size:150%;
+  color: #3e403f;
+  letter-spacing: 1px;
+  font-weight: 400;
+
+}
 div.inicio {
   box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
   padding: 2%;
@@ -12,24 +20,25 @@ div.inicio {
   margin: 21px auto;
   height: 10%;
 }
-div.imagen{
-  display: none;
-}
+
 div.inicio p{
-  font-family: "Cookie", cursive;
-  font-size:50%;
+  font-family: "Inconsolata", sans-serif;
+  font-size:100%;
   color: #3e403f;
   letter-spacing: 1px;
-  font-weight: 400;
-  margin-top : 4%;
+  font-weight: bold;
 }
 div.inicio h2 {
-  font-family: "Cookie", cursive;
+  font-family: "Inconsolata", sans-serif;
   font-size:350%;
   color: #3e403f;
   letter-spacing: 1px;
   font-weight: 400;
 
+}
+div.inicio i{
+  color:#ff6f8d;
+  font-size: 30px;
 }
 
 hr {
@@ -51,10 +60,17 @@ div.comprar button:hover{
 div.comprar button{
   background-color: white;
   font-family: 'Inconsolata', sans-serif;
-  border-radius: 13px 13px;
+  margin: 2%;
   padding: 3%;
-  border: 2px solid #F0386B;
+  border: 2px solid #ff6f8d;
   color:#132743!important;
+}
+div.comprar i{
+color:  #ff6f8d;
+}
+div.comprar a{
+text-decoration: none;
+color:#132743;
 }
 div.mapa{
   display: none;
@@ -123,7 +139,7 @@ div.card{
 width: 30%;
 }
 div.card img{
-  height: 190px;
+  height: 210px;
   width: 100%;
 }
 div.inicio{
