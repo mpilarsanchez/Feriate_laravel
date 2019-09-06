@@ -29,7 +29,6 @@ public function cargar(Request $req){
  "min"=>"El campo :attribute tiene un minimo de :min",
  "max"=>"El campo :attribute tiene un maximo de :max",
  "numeric"=>"El campo :attribute debe ser un numero",
- "date"=> "El campo :attribute debe ser una fecha",
  "integer"=>"El campo :attribute debe ser un numero entero",
  "unique"=>"El campo :attribute se encuentra repetido",
  "file"=>"El archivo tiene que ser ..... jpg.."
@@ -47,11 +46,14 @@ public function cargar(Request $req){
   $productoNuevo->nombre = $req["nombre"];
   $productoNuevo->categoria_id = $req["categoria"];
   $productoNuevo->precio = $req["precio"];
+  $productoNuevo->talle = $req["talle"];
+  $productoNuevo->estado = $req["estado"];
   $productoNuevo->cantidad = $req["cantidad"];
   $productoNuevo->descripcion = $req["descripcion"];
   $productoNuevo->baneado = 0;
   $productoNuevo->destino = 0;
 //AGREGAR GUARDAR IMAGEN POR DEFECTO
+
   $productoNuevo->save();
   $productoImagen->producto_id = $productoNuevo->id;
   $productoImagen->nombre = $nombreArchivo;
@@ -89,7 +91,6 @@ public function cargar(Request $req){
     "min"=>"El campo :attribute tiene un minimo de :min",
     "max"=>"El campo :attribute tiene un maximo de :max",
     "numeric"=>"El campo :attribute debe ser un numero",
-    "date"=> "El campo :attribute debe ser una fecha",
     "integer"=>"El campo :attribute debe ser un numero entero",
     "unique"=>"El campo :attribute se encuentra repetido",
     "file"=>"El archivo tiene que ser ..... jpg.."
@@ -105,7 +106,7 @@ public function cargar(Request $req){
      $nombreArchivo = basename($ruta);
 
      $productoNuevo->user_id = Auth::user()->id;
-     $productoNuevo->feria_id = $id;
+     $productoNuevo->feria_id = $req["feria_id"];
      $productoNuevo->nombre = $req["nombre"];
      $productoNuevo->categoria_id = $req["categoria"];
      $productoNuevo->precio = $req["precio"];
@@ -121,11 +122,12 @@ public function cargar(Request $req){
      $productoImagen->producto_id = $productoNuevo->id;
      $productoImagen->nombre = $nombreArchivo;
      $productoImagen->save();
-     $id = $req->route('id');
+     $id = $req["feria_id"];
      return redirect("/feria/$id");
    }
 
    public function borrar(Request $req, $id){
+
      $productoImagen = Imagen::where('producto_id', '=' ,$id)
      ->get()
      ->first();
@@ -137,6 +139,7 @@ public function cargar(Request $req){
      $deletedProducto->delete();
      $feria_id = $req["feria_id"];
      return redirect("/feria/$feria_id");
+
    }
 
    public function datosProductos($categoria)
@@ -158,5 +161,5 @@ public function cargar(Request $req){
       return view("productos", $vac);
  }
 
- 
+
 }
