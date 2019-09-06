@@ -42,8 +42,13 @@ h1 {
   font-size: 30px;
   text-align: center;
   margin-top: 6%;
-}
 
+}
+h4{
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
 div.categorias {
   width: 95%;
 }

@@ -44,13 +44,17 @@ div.producto{
   margin: 0 auto;
   width: 80%;
 }
+div.comprar button:hover{
+  background-color: #F0386B;
+  color: white;
+}
 div.comprar button{
   background-color: white;
   font-family: 'Inconsolata', sans-serif;
   border-radius: 13px 13px;
-  padding: 2%;
+  padding: 3%;
   border: 2px solid #F0386B;
-color:#132743!important;
+  color:#132743!important;
 }
 div.mapa{
   display: none;
@@ -85,7 +89,7 @@ div.card p{
   text-align: center;
 }
 div.card h3{
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inconsolata', sans-serif;
   font-weight: bold;
   color:#407088;
   font-size: 130%;

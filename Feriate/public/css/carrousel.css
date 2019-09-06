@@ -1,0 +1,33 @@
+.owl-carousel .owl-item img{
+  padding: 10px;
+}
+.owl-carousel{
+  margin: 10px;
+}
+div.card h5{
+  font-family: "Inconsolata", sans-serif;
+text-align: center;
+font-weight: bold;
+}
+div.card p{
+  font-family: "Inconsolata",sans-serif;
+  text-align: center;
+}
+div.card a{
+  background-color: white;
+    color: black;
+    border: 2px solid #FFD0D9;
+    font-size: 12px;
+    border-radius: 13px 13px;
+    letter-spacing: 2px;
+    padding: 6%;
+    margin: 0 auto;
+    display: block;
+    width: 70%;
+}
+div.card a:hover{
+  background-color:#FFD0D9;
+    border: 2px solid #FFD0D9;
+    color:white;
+
+}
