@@ -35,16 +35,27 @@ Edita tu feria
           <label for="descripcion"> Descripcion <span>*</span></label>
           <input type="text" name="descripcion" class="form-control" id="descripcion" placeholder="descripcion"  value="{{$feriaEdit->descripcion}}">
         </div>
+        <div class=" order-md-1">
+          @if($feriaEdit->imagen[0]["nombre"] == null)
+            <img src="/images/logo_feriate_deffault_ii.png" alt="">
+          @else
+          <img class="img-thumbnail" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/storage/{{$feriaEdit->imagen[0]["nombre"]}}" data-holder-rendered="true" style="width: 300px; height: 300px;">
+          @endif
+        </div>
         <div class="foto">
           <div class="form-group col-md-6">
-            <label for="foto_feria">Subi una Foto de tu feria:</label>
+            <label for="foto_feria">Cambia la Foto de tu feria:</label>
             <div class="display">
             </div>
+            <img src="" id="profile-img-tag" width="200px" />
+            <br>
             <input type="file" id="upload" name="imagen">
 
       <button type="submit"id="crear" class="btn btn-primary">Actualizar!</button>
 
     </form>
+
+      <script src="./js/crear_feria.js"></script>
     <form method="post" action="/borrarFeria/{{$feriaEdit->id}}" enctype="multipart/form-data">
       {{method_field('delete')}}
       {{csrf_field()}}
@@ -58,41 +69,39 @@ Edita tu feria
     </div>
   </div>
   <main>
-    <div class="producto">
-      <h1>Tus productos</h1>
-  {{-- @if(!empty($datos_productos))
+
+  @if(!$datos_productos->isEmpty())
     @foreach ($datos_productos as $producto)
+      <div class="producto">
+        <h1>Tus productos</h1>
           <div class="card col-md-6 mt-4" >
-            @if ($producto['img_nombre'] != '')
-          <img src="img_user/{{$producto['img_nombre']}}" class="card-img-top mt-2" alt="...">
-        @endif
-          @if ($producto['img_nombre'] == '')
-          <img src="img_user/ropa2.jpg" class="card-img-top" alt="...">
-        @endif  --}}
+              <img src="/storage/{{$producto->imagen[0]['nombre']}}" class="card-img-top mt-2" alt="...">
           <div class="card-body">
-            {{-- <h4 class="card-text">{{$producto['pr_nombre']}}</h4>
+           <h4 class="card-text">{{$producto['nombre']}}</h4>
             <div class="descripcion">
-             <h3 class="precio"><b>Precio:{{$producto['pr_precio']}}</b><h3>
-             <h3 class="talle"><b>Talle:{{$producto['pr_talle']}}</b></h3>
-             <h3 class="marca"><b>Marca:{{$producto['pr_marca']}}</b></h3>
+             <h3 class="precio"><b>Precio:{{$producto['precio']}}</b><h3>
+             <h3 class="talle"><b>Talle:{{$producto['talle']}}</b></h3>
+             <h3 class="marca"><b>Marca:{{$producto['marca']}}</b></h3>
            </div>
            <div class="descripcion">
-             <h3 class="estado"><b>Estado:{{$producto['pr_estado']}}</b></h3>
-             <h3 class="cantidad"><b>Cantidad:{{$producto['pr_cantidad']}}</b></h3>
-            </div> --}}
+             <h3 class="estado"><b>Estado:{{$producto['estado']}}</b></h3>
+             <h3 class="cantidad"><b>Cantidad:{{$producto['cantidad']}}</b></h3>
+            </div>
         </div>
             <div class="comprar">
-{{--
-           @if(estaLogueado()):?>
-             @if(esDuenoDeFeria($value))
-              <a href="editar_producto.php?id={{$producto['pr_id']}}"><button id="boton"  type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  Editar Producto</button></a>
+
+           @if(Auth::check())
+             @if($producto["user_id"] == Auth::user()->id)
+              <a href="/editarProducto/{{$producto['id']}}"><button id="boton"  type="button" name="button" class="btn btn-light m-2"><i class="fas fa-tag"></i>  Editar Producto</button></a>
             @endif
          @endif
 </div>
             </div>
           </div>
         @endforeach
-      @endif  --}}
+      @else
+        <p>Todavia no cargaste ningun producto</p>
+      @endif
         <script src="../js/crear_feria.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
          <link rel="stylesheet" href="/resources/demos/style.css">

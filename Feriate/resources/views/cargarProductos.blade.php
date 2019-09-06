@@ -23,6 +23,15 @@ Carga tus Productos
           @enderror
       </div>
       <div class="form-group col-md-6">
+        <label for="cantidad"> Cantidad <span>*</span></label>
+        <input type="cantidad" class="form-control @error('cantidad') is-invalid @enderror" id="cantidad" placeholder="cantidad de tu producto" name="cantidad">
+          @error('cantidad')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+      </div>
+      <div class="form-group col-md-6">
         <label for="descripcion">Descripcion<span>*</span></label>
         <textarea type="text" class="form-control" id="descripcion" placeholder="Descripcion" name="descripcion" required ></textarea>
         @error('descripcion')
@@ -80,18 +89,8 @@ Carga tus Productos
         <div class="imagen">
           <h3>Imagen Principal</h3>
           <img src="" class="profile" width="200px" />
-        <input type="file" class="form-control-file" id="foto1" name="foto_producto" value="foto_producto">
+        <input type="file" class="form-control-file" id="foto1" name="foto_producto" >
         </div>
-        <div class="imagen">
-        <h3>Otras imagenes</h3>
-          <img src="" class="profile" width="200px" />
-          <input type="file" class="form-control-file" id="foto2" name="" value="">
-        </div>
-      <div class="imagen">
-        <h3>Otras imagenes</h3>
-        <img src="" class="profile" width="200px" />
-        <input type="file" class="form-control-file" id="foto3" name="" value="">
-      </div>
     </div>
      <button type="submit" class="btn btn-outline-light btn btn-lg btn-block mt-3" id="boton">Ferialo!</button>
     </form>

@@ -48,12 +48,11 @@ Productos
                        <input type="hidden" name="id" value="{{$producto['id']}}">
                        <button type="submit" class="mt-4"> Agregar al carrito!</button>
                      </form>
-
                  @endif
                  @else
-                      <a href="login.php"><button type="button" class="mt-1" name="button">  Logueate para comprar</a></button>
+                      <a href="login.php"><button type="button" class="mt-4" name="button">  Logueate para comprar</a></button>
                 @endif
-              <a href="/feria/{{ $producto['feria_id'] }}" ><button type="button" class="mt-1" name="button"> Ir a esta feria</a></button>
+              <a href="/feria/{{ $producto['feria_id'] }}" ><button type="button" class="mt-4" name="button"> Ir a esta feria</a></button>
             </div>
           </div>
         </div>

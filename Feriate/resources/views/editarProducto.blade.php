@@ -95,26 +95,17 @@ Carga tus Productos
         <div class="imagen">
           <h3>Imagen Principal</h3>
           <img src="/{{$productoEdit->imagenes[0]['nombre']}}" class="profile" width="200px" />
-        <input type="file" class="form-control-file" id="foto1" name="foto_producto" value="foto_producto">
+          <input type="file" class="form-control-file" id="foto1" name="foto_producto">
         </div>
-        <div class="imagen">
-        <h3>Otras imagenes</h3>
-          <img src="" class="profile" width="200px" />
-          <input type="file" class="form-control-file" id="foto2" name="" value="">
-        </div>
-      <div class="imagen">
-        <h3>Otras imagenes</h3>
-        <img src="" class="profile" width="200px" />
-        <input type="file" class="form-control-file" id="foto3" name="" value="">
-      </div>
     </div>
+     <input type="hidden" name="feria_id" value="{{$productoEdit['feria_id']}}">
      <button type="submit" class="btn btn-outline-light btn btn-lg btn-block mt-3" id="boton">Actualizar!</button>
     </form>
     <form class="" action="/borrarProducto/{{$productoEdit['id']}}" method="post" id="eliminarproducto">
       {{method_field('delete')}}
       {{csrf_field()}}
       <button type="submit" class="btn btn-outline-light btn btn-lg btn-block mt-3" id="eliminar" >Borrar</button>
-      <input type="hidden" name="" value="{{$productoEdit['feria_id']}}">
+      <input type="hidden" name="feria_id" value="{{$productoEdit['feria_id']}}">
     </form>
 </main>
 <div id="dialog-confirm" title="Eliminar Usuario?" style="display:none">

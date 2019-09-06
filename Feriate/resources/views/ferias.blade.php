@@ -16,8 +16,8 @@ Ferias por categoria
         @foreach ($datosFerias as $feria)
         <div class="feria col-md-4 col-lg-3">
           <div class="cuerpo-feria">
-            @if(!empty($feria["img_nombre"]))
-              <img src="/images/{{ $feria["img_nombre"]}}" alt="">
+            @if(!empty($feria->imagen[0]["nombre"]))
+              <img src="/storage/{{$feria->imagen[0]["nombre"]}}" alt="">
             @else
                <img src="/images/logo_feriate_deffault_ii.png" alt="">
             @endif
