@@ -64,11 +64,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        app('App\Http\Controllers\MailsController')->sendMail($data['email'],$data['nombre'],'nuevoUsuario');
         return User::create([
             'nombre' => $data['nombre'],
             'apellido'=> $data['apellido'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
     }
 }
