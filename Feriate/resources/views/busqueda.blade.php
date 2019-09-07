@@ -8,7 +8,7 @@ Productos
 @section('content')
   <div class="container">
 {{-- //{{dd($categoria)}} --}}
-<h2 id="titulo" class="mt-3">Estas viendo categoria / {{$categoria}}</h2>
+<h2 id="titulo" class="mt-3">Estas viendo los resultados de tu busqueda de / {{$busqueda}}</h2>
 <hr>
  @if($datosProductos->isEmpty())
      <div class="alert alert-danger" role="alert">
