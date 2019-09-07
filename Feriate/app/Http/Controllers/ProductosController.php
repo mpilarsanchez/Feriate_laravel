@@ -155,13 +155,10 @@ public function cargar(Request $req){
  }
 
    public function search(Request $req){
-      $datosProductos = Producto::where('nombre', 'like', '%'.$req["search"].'%')->paginate(1);
-    //  $categoria = Categoria::all();
-      //$categoria = Categoria::where('cat_nombre', $categoria)->first();
+      $datosProductos = Producto::where('nombre', 'like', '%'.$req["search"].'%')->paginate(2);
       $busqueda = $req["search"];
-      $vac = compact("datosProductos", "busqueda", "categoria");
-      return view("productos", $vac);
+      $vac = compact("datosProductos", "busqueda");
+      return view("busqueda", $vac);
  }
-
 
 }
