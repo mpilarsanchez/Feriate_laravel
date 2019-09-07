@@ -9,7 +9,7 @@ Home
     </div>
     <h1 class="titulo mb-2">LAS FERIAS MAS VISITADAS</h1>
     <h4>podes ver todas las ferias <a href="
-    #">aqui</a></h4>
+    /ferias/categoria/Todas">aqui</a></h4>
     @include("carrousel")
       <main>
           <h1 class="titulo">CATEGORIAS</h1>

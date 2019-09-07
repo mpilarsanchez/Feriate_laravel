@@ -1,83 +1,29 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/carrousel.css">
-  </head>
-  <body>
     <div class="container">
-
     <div class="owl-carousel owl-theme">
+      @if(!$datosFerias->isEmpty())
+      @foreach ($datosFerias as $feria)
       <div class="item">
         <div class="card" style="width: 15rem;">
-        <img style="height: 15rem;"src="/images/muebles 1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Nombre de la feria</h5>
-          <p class="card-text">Ubicacion</p>
-          <p class="card-text">Descripcion </p>
-          <a href="#" class="btn btn-primary">VER FERIA</a>
+          @if(!empty($feria->imagen[0]["nombre"]))
+            <img src="/storage/{{$feria->imagen[0]["nombre"]}}" style="width:30vh; height: 40vh" alt="">
+          @else
+             <img src="/images/logo_feriate_deffault_ii.png" style="width:30vh; height: 40vh" alt="">
+          @endif
+          <div class="card-body">
+            <h5 class="card-title">{{$feria["nombre"]}}</h5>
+            {{-- <a target="_blank" href="https://www.google.com/maps/place/{{$feria["ubicacion"]}}">{{$feria["ubicacion"]}}<i class="fas fa-map-marker-alt"></i><a/>
+            <p class="card-text">{{$feria["descripcion"]}} </p> --}}
+            <a href="/feria/{{$feria["id"]}}" class="btn btn-primary">VER FERIA</a>
+          </div>
         </div>
       </div>
-</div>
-      <div class="item">
-        <div class="card" style="width: 15rem;">
-        <img style="height: 15rem;"src="/images/feriaropa.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Nombre de la feria</h5>
-          <p class="card-text">Ubicacion</p>
-          <p class="card-text">Descripcion </p>
-          <a href="#" class="btn btn-primary">VER FERIA</a>
-        </div>
-        </div>
+        @endforeach
+      @else
+      @endif
       </div>
-      <div class="item">
-        <div class="card" style="width: 15rem;">
-        <img style="height: 15rem;"src="/images/muebles 1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Nombre de la feria</h5>
-          <p class="card-text">Ubicacion</p>
-          <p class="card-text">Descripcion </p>
-          <a href="#" class="btn btn-primary">VER FERIA</a>
-        </div>
-        </div>
-</div>
-<div class="item">
-  <div class="card" style="width: 15rem;">
-  <img style="height: 15rem;"src="/images/feriaropa.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Nombre de la feria</h5>
-    <p class="card-text">Ubicacion</p>
-    <p class="card-text">Descripcion </p>
-    <a href="#" class="btn btn-primary">VER FERIA</a>
-  </div>
-  </div>
-</div>
-<div class="item">
-  <div class="card" style="width: 15rem;">
-  <img style="height: 15rem;"src="/images/muebles 1.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Nombre de la feria</h5>
-    <p class="card-text">Ubicacion</p>
-    <p class="card-text">Descripcion </p>
-    <a href="#" class="btn btn-primary">VER FERIA</a>
-  </div>
-  </div>
-</div>
-      <div class="item">
-        <div class="card" style="width: 15rem;">
-        <img style="height: 15rem;"src="/images/feriaropa.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Nombre de la feria</h5>
-          <p class="card-text">Ubicacion</p>
-          <p class="card-text">Descripcion </p>
-          <a href="#" class="btn btn-primary">VER FERIA</a>
-        </div>
-        </div>
-      </div>
-        </div>
 
       </div>
     <script
@@ -86,23 +32,6 @@
   crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/owl.carousel.min.js">
 </script>
-<script type="text/javascript">
-  $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:true,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:3
-          },
-          1000:{
-              items:5
-          }
-      }
-  })
+<script type="text/javascript" src="/js/carrousel.js">
+
 </script>
-  </body>
-</html>
