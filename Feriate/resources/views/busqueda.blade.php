@@ -22,7 +22,9 @@ Productos
   <main>
     <div class="row d-md-flex justify-content-around">
       @foreach ($datosProductos as $producto)
-
+        @if($producto->feria['hasta'] < date('m/d/Y'))
+          <p>Lo Sentimos No Hay Productos para la categoria Seleccionada</p>
+        @else
           <div class="card col-md-4 col-lg-3" >
           <img src="/storage/{{ $producto->imagen[0]['nombre']}}" class="card-img-top" alt="...">
           <div class="card-body">
@@ -48,7 +50,7 @@ Productos
             </div>
           </div>
         </div>
-
+@endif
 @endforeach
 
 {{$datosProductos->links()}}

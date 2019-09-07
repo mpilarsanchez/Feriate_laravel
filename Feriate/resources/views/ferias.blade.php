@@ -28,14 +28,17 @@ Ferias por categoria
              <h5><a target="_blank" href="https://www.google.com/maps/place/{{$feria["ubicacion"]}}"><i class="fas fa-map-marker-alt"></i> <a/>  {{$feria["ubicacion"]}}</h5>
             <h3>{{$feria["nombre"]}}</h3>
 
-
           {{-- <!---  <img src="./img_user/ // {{ $datosFerias["avatar"]}}" alt="">  ---> --}}
           <div class="descripcion">
             <h5>{{$feria["descripcion"]}}</h5>
           </div>
           </div>
           <div class="boton-header">
-            <a href="/feria/{{$feria["id"]}}" ><button class="btn btn-light mt-3 mb-3" type="button" name="button">Ver feria!</button></a>
+            @if($feria["hasta"]<date('m/d/Y'))
+              <button class="btn btn-light mt-3 mb-3" type="button" name="button">Finalizada</button>
+            @else
+              <a href="/feria/{{$feria["id"]}}" ><button class="btn btn-light mt-3 mb-3" type="button" name="button">Ver feria!</button></a>
+            @endif
           </div>
 
 
