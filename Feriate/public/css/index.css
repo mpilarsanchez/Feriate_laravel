@@ -28,6 +28,15 @@ div.boton-header a{
 div.header-feria i{
   color:#ff6f8d;
 }
+h2#titulo{
+  font-family: "Inconsolata", sans-serif;
+  font-size:150%;
+  color: #3e403f;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-top: 5px;
+
+}
 div.header-feria {
   background-color: white;
   text-align: center;

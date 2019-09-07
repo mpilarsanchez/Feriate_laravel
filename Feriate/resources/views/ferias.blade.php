@@ -7,6 +7,8 @@ Ferias por categoria
 @section('content')
 
   <div class="container">
+    <h2 id="titulo" class="mt-3">Estas viendo todas las ferias</h2>
+    <hr>
      @if($datosFerias->isEmpty())
        <div class="alert alert-danger mx-5" role="alert" >
         <p>Lo Sentimos No Hay Datos para la Categoria seleccionada</p>

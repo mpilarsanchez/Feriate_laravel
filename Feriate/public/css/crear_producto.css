@@ -5,19 +5,15 @@ option{
 font-family: "inconsolata", sans-serif;
 color: #3e403f;
 }
-div.display {
-  width: 70%;
-  height: 190px;
-  border: 1px solid black;
-  margin-bottom: 3%;
-}
 
-div.upload_img{
-  width: 90%;
+div.imagen{
+  width: 20%;
+  display: block;
   margin: 0 auto;
-  padding: 2%;
 }
-
+div.imagen.profile img{
+  width: 20%;
+}
 div.container h1{
   font-family: "Playfair Display",monospace;
   text-align: center;
@@ -38,7 +34,7 @@ button#boton:hover{
 background-color:#FFD0D9;
   color:white;
 }
-button#boton{
+button.boton{
   background-color: white;
       color: #3e403f;
     border: 2px solid #FFD0D9;
@@ -48,52 +44,11 @@ button#boton{
     letter-spacing: 2px;
     padding: 1%;
     font-family: "Inconsolata", sans-serif;
-}
-footer ul li {
-  width: 100%;
-  list-style: none;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 13px;
-  background-color: #FF6978;
-  color: white;
-  margin-top: 1%;
-}
-footer ul {
-  padding-inline-start: 0px;
-   margin-bottom: 0px;
-}
-footer ul li a{
-  color:white !important;
-  text-decoration-style: none;
-}
-@media (min-width: 940px){
-  div.display {
-    width: 100%;
-  }
-  div.upload_img{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  div.imagen{
-    width: 25%;
-  }
-  button#boton{
     width: 30%;
     margin: 0 auto;
-  }
-  footer ul li{
-      width: 19%;
-      float: left;
-      margin: 3% 3%;
-     border-radius: 13px 13px;
-     padding: 1%;
-     color:white;
-    }
-    footer ul{
-      padding-bottom: 5%;
-      margin: 0 auto;
-  }
+}
+
+@media (min-width: 940px){
+
+
 }

@@ -26,19 +26,19 @@ div.inicio p{
   font-size:100%;
   color: #3e403f;
   letter-spacing: 1px;
-  font-weight: bold;
+
 }
 div.inicio h2 {
   font-family: "Inconsolata", sans-serif;
-  font-size:350%;
+  font-size:200%;
   color: #3e403f;
   letter-spacing: 1px;
   font-weight: 400;
-
+font-weight: bold;
 }
 div.inicio i{
   color:#ff6f8d;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 hr {
@@ -85,7 +85,7 @@ div.inicio button {
     border-radius: 13px 13px;
     letter-spacing: 2px;
     padding: 2%;
-    margin-top: 10%;
+    
 }
 div.inicio button:hover{
   background-color: #FFD0D9;

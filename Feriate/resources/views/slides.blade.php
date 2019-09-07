@@ -43,7 +43,6 @@
           <div class="comprar">
           <img src="images/percha.jpg" alt="">
         </div>
-
       <div class="redes">
         <i class="fab fa-instagram"></i>
         <i class="fab fa-twitter"></i>

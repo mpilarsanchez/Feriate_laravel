@@ -13,7 +13,7 @@ Carga tus Productos
   <form method="post" action="/cargarProductos/{{Request::segment(2)}}" enctype="multipart/form-data">
       {{csrf_field()}}
     <div class="form-row">
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4">
         <label for="nombre"> Nombre <span>*</span></label>
         <input type="nombre" class="form-control @error('nombre') is-invalid @enderror" id="nombre" placeholder="nombre de tu producto" name="nombre">
           @error('nombre')
@@ -22,7 +22,7 @@ Carga tus Productos
               </span>
           @enderror
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4">
         <label for="cantidad"> Cantidad <span>*</span></label>
         <input type="cantidad" class="form-control @error('cantidad') is-invalid @enderror" id="cantidad" placeholder="cantidad de tu producto" name="cantidad">
           @error('cantidad')
@@ -31,7 +31,7 @@ Carga tus Productos
               </span>
           @enderror
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4">
         <label for="descripcion">Descripcion<span>*</span></label>
         <textarea type="text" class="form-control" id="descripcion" placeholder="Descripcion" name="descripcion" required ></textarea>
         @error('descripcion')
@@ -92,7 +92,7 @@ Carga tus Productos
         <input type="file" class="form-control-file" id="foto1" name="foto_producto" >
         </div>
     </div>
-     <button type="submit" class="btn btn-outline-light btn btn-lg btn-block mt-3" id="boton">Ferialo!</button>
+     <button type="submit" class="boton btn btn-outline-light btn btn-lg btn-block mt-3" id="boton">Ferialo!</button>
     </form>
 </main>
 <script src="/js/productos.js"></script>

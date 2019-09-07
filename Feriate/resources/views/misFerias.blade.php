@@ -9,7 +9,7 @@ Mis Ferias
 
   <div class="container">
     <div class="inicio">
-      <h1>Mis Ferias</h1>
+    <h2 id="titulo">Estas viendo tus ferias</h2>
     </div>
     <hr>
      @if($datosFerias->isEmpty())
@@ -24,11 +24,11 @@ Mis Ferias
           <div class="cuerpo-feria">
 
         @if($ImagenFeria == null)
-              
+
               <img src="/images/logo_feriate_deffault_ii.png" alt="">
             @else
               <img src="/storage/{{ $feria->imagen[0]["nombre"]}}" alt="">
-           
+
            @endif
           </div>
           <div class="header-feria">
@@ -41,7 +41,7 @@ Mis Ferias
            <h5>{{$feria["descripcion"]}}</h5>
          </div>
           </div>
-          <div class="boton-header">
+          <div class="boton-header mb-4">
             <a href="/feria/{{$feria["id"]}}" ><button class="btn btn-light mt-3" type="button" name="button">Ver feria!</button></a>
           </div>
         </div>
