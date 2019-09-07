@@ -13,7 +13,7 @@ class Categoria extends Model
 
   //relacion Categoria/Productos : una categoria tiene muchos productos
     public function producto(){
-      return $this->hasMany("App\Producto", "producto_id");
+      return $this->hasMany("App\Producto", "categoria_id");
     }
 
 }

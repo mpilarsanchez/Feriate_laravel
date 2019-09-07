@@ -7,6 +7,7 @@ Productos
 @endsection
 @section('content')
   <div class="container">
+{{-- //{{dd($categoria)}} --}}
 <h2 id="titulo" class="mt-3">Estas viendo categoria / {{$categoria}}</h2>
 
   <hr>
