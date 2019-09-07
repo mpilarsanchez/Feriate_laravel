@@ -12,17 +12,15 @@ Productos
 <hr>
  @if($datosProductos->isEmpty())
      <div class="alert alert-danger" role="alert">
-    @if(isset($busqueda) && $busqueda != '')
-        <p>Lo Sentimos No Hay Productos para la Busqueda {{ $busqueda }}</p>
-    @else
         <p>Lo Sentimos No Hay Productos para la Categoria seleccionada</p>
-    @endif
      </div>
   @else
   <main>
     <div class="row d-md-flex justify-content-around">
-      @foreach ($datosProductos as $producto)
-
+      @if($datosProductos[0]->feria['hasta'] < date('m/d/Y'))
+        <p>Lo Sentimos No Hay Productos para la categoria Seleccionada</p>
+      @else
+       @foreach ($datosProductos as $producto)
           <div class="card col-md-4 col-lg-3" >
           <img src="/storage/{{ $producto->imagen[0]['nombre']}}" class="card-img-top" alt="...">
           <div class="card-body">
@@ -50,7 +48,7 @@ Productos
         </div>
 
 @endforeach
-
+@endif
 {{$datosProductos->links()}}
 </div>
 @endif

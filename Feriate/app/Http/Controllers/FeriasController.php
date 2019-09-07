@@ -15,13 +15,27 @@ class FeriasController extends Controller
 
      public function datosFerias($categoria)
      {
-
+      if($categoria == 'Todas'){
+         $datosFerias =Feria::all();
+         $vac = compact("datosFerias");
+         return view("ferias", $vac);
+      }else{
        $datosCategorias = Categoria::where('cat_nombre', $categoria)->first();
        $categoriaId = $datosCategorias['cat_id'];
-       $datosFerias = Feria::paginate(6);
+       $datosFerias = collect();
+       $datosProductos = Producto::where('categoria_id',$categoriaId)->get();
+       //investigar como hacer un groupBy feria_id en lugar del if siguiente
+       $feria_id ='';
+       foreach ($datosProductos as $producto) {
+         if($feria_id == $producto['feria_id']){
+         }else{
+           $datosFerias->push(Feria::where('id',$producto['feria_id'])->get()[0]);
+         }
+         $feria_id = $producto['feria_id'];
+       }
        $vac = compact("datosFerias");
        return view("ferias", $vac);
-
+     }
    }
 
    public function misFerias()
