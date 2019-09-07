@@ -8,7 +8,7 @@
       <div class="item">
         <div class="card" style="width: 15rem;">
           @if(!empty($feria->imagen[0]["nombre"]))
-            <img src="/storage/{{$feria->imagen[0]["nombre"]}}" style="width:30vh; height: 40vh" alt="">
+            <img src="/storage/{{$feria->imagen[0]["nombre"]}}" style="width:30vh; height: 30vh" alt="">
           @else
              <img src="/images/logo_feriate_deffault_ii.png" style="width:30vh; height: 40vh" alt="">
           @endif
