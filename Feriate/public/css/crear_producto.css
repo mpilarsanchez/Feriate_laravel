@@ -1,3 +1,8 @@
+div.container{
+  width: 90%;
+  margin: 0 auto;
+font-family: "Inconsolata", sans-serif;
+}
 span{
   color: #FF6978;
 }
@@ -14,15 +19,34 @@ div.imagen{
 div.imagen.profile img{
   width: 20%;
 }
-div.container h1{
+h2#titulo{
+  font-family: "Inconsolata", sans-serif;
+  font-size:100%;
+  color: #3e403f;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+main{
+  width: 80%;
+  text-align: center;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+}
+ h1{
   font-family: "Playfair Display",monospace;
   text-align: center;
   font-size: 150%;
   letter-spacing: 2px;
-  margin:3%;
   color: #3e403f;
   font-weight: bold;
+
 }
+
 h3{
   font-family: "inconsolata",sans-serif;
   font-size: 100%!important;

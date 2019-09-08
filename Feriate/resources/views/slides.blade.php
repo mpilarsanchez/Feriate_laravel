@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <link href="https://fonts.googleapis.com/css?family=Oswald|Pathway+Gothic+One|Source+Sans+Pro&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cookie|Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/14dd9125ec.js"></script>
 <link rel="stylesheet" href="./css/slides.css">
 </head>
@@ -43,7 +43,10 @@
           <div class="comprar">
           <img src="images/percha.jpg" alt="">
         </div>
-      <div class="redes">
+        <div class="marca">
+          <h2 >seguinos para enterarte donde estan las ferias este finde</h2>
+        </div>
+      <div class="redes animated swing" id="animacion">
         <i class="fab fa-instagram"></i>
         <i class="fab fa-twitter"></i>
         <i class="fab fa-facebook"></i>

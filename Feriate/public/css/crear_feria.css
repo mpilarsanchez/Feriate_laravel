@@ -1,50 +1,40 @@
 div.container{
-width: 80%;
+width: 90%;
 margin: 0 auto;
 }
 span{
   color: #FF6978;
 }
-div.registro input{
-  width: 100%;
-  margin: 0 auto;
-}
-div.registro select, input{
-  border: 1px solid  black;
-}
-option{
-font-family: "inconsolata", sans-serif;
-color: #3e403f;
-}
-label{
-  font-weight: bold;
-}
-div.btn.btn-info{
-  background-color: #FF6978!important;
-}
-input#upload{
-  width: 37%;
-  margin: 2%;
-}
-
-h1{
-  font-family: "Playfair Display",monospace;
-  text-align: center;
-  font-size: 140%;
+h2#titulo{
+  font-family: "Inconsolata", sans-serif;
+  font-size:100%;
   color: #3e403f;
+  letter-spacing: 1px;
   font-weight: bold;
-  margin-top: 3%!important;
+  margin-top: 10px;
+
+}
+div.formulario{
+  font-family: "Inconsolata", sans-serif;
+  width: 80%;
+  text-align: center;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
 }
 h3{
   font-family: "inconsolata",sans-serif;
   font-size: 120%;
   color: #FF6978;
   margin-top: 3%;
-  margin-left: 5%;
   color: #3e403f;
 }
 div.foto{
   margin: 0 auto;
+  width: 100%;
+  
 }
 #crear {
   display: block;
@@ -52,9 +42,10 @@ div.foto{
     color: #3e403f;
     border: 2px solid #FFD0D9;
     font-size: 20px;
+    font-weight:bold;
   font-family: "inconsolata",sans-serif;
     letter-spacing: 1px;
-    padding: 1%;
+    padding: 2%;
     margin: 0 auto;
 }
 #crear:hover{

@@ -9,7 +9,7 @@ Carga tus Productos
 @endsection
 @section('content')
   <div class="container">
-<h1>Vende tu producto!</h1>
+<h2 id="titulo">Estas editando tus productos</h2>
 <main>
   <form method="post" action="/editarProductos/{{$productoEdit['id']}}" enctype="multipart/form-data">
     {{method_field('put')}}
@@ -86,12 +86,13 @@ Carga tus Productos
           </select>
       </div>
        </div>
-       <h1>Subi fotos!</h1>
+       <div class="upload_img">
         <div class="imagen">
           <h3>Imagen Principal</h3>
           <img src="/{{$productoEdit->imagenes[0]['nombre']}}" class="profile"  width="200px">
           <input type="file" class="form-control-file" id="foto1" name="foto_producto">
         </div>
+        
         <input type="hidden" name="feria_id" value="{{$productoEdit['feria_id']}}">
      <button type="submit" class="boton btn btn-outline-light btn btn-lg btn-block mt-3" id="boton">Actualizar!</button>
     </form>

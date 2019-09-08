@@ -1,6 +1,7 @@
 @extends('plantilla')
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../css/crear_feria.css">
+
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 @section('titulo')
@@ -8,7 +9,10 @@ Edita tu feria
 @endsection
 @section('content')
     <div class="container">
-      <h1>Edita tu feria</h1>
+      <h2 id="titulo">Estas editando tu feria</h2>
+      <div class="formulario">
+
+
     <form method="post" action="/actualizarFeria/{{$feriaEdit->id}}" enctype="multipart/form-data">
       {{method_field('put')}}
       {{csrf_field()}}
@@ -35,7 +39,7 @@ Edita tu feria
           <input type="text" name="descripcion" class="form-control" id="descripcion" placeholder="descripcion"  value="{{$feriaEdit->descripcion}}">
         </div>
         <div class="foto">
-          <div class="form-group col-md-6">
+          <div class="form-group">
             <label for="foto_feria">Cambia la Foto de tu feria:</label>
           <div class="display">
           @if($feriaEdit->imagen[0]["nombre"] == null)
@@ -43,7 +47,7 @@ Edita tu feria
           @else
           <img class="img-thumbnail" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/storage/{{$feriaEdit->imagen[0]["nombre"]}}" data-holder-rendered="true" style="width: 300px; height: 300px;">
           @endif
-          <input type="file" id="upload" name="imagen">
+          <input  class="mt-3" type="file" id="upload" name="imagen">
         </div>
         </div>
         </div>
@@ -55,6 +59,7 @@ Edita tu feria
       {{csrf_field()}}
     <button type="submit"id="crear" class="btn btn-primary">Borrar Feria!</button>
     </form>
+      </div>
   <h1>Tus productos</h1>
   <div class="row d-md-flex justify-content-around">
   @if(!$datos_productos->isEmpty())
@@ -85,7 +90,7 @@ Edita tu feria
       @else
         <p>Todavia no cargaste ningun producto</p>
       @endif
-    </div>
+
   </div>
         <script src="../js/crear_feria.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">

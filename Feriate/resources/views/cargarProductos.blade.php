@@ -8,7 +8,7 @@ Carga tus Productos
 @endsection
 @section('content')
   <div class="container">
-<h1>Vende tu producto!</h1>
+<h2 id="titulo">Estas cargando tus productos</h2>
 <main>
   <form method="post" action="/cargarProductos/{{Request::segment(2)}}" enctype="multipart/form-data">
       {{csrf_field()}}
@@ -84,7 +84,7 @@ Carga tus Productos
           </select>
       </div>
        </div>
-       <h1>Subi fotos!</h1>
+    
        <div class="upload_img">
         <div class="imagen">
           <h3>Imagen Principal</h3>

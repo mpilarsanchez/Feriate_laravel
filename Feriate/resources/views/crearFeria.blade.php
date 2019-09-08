@@ -7,8 +7,9 @@
 Crea tu Feria
 @endsection
 @section('content')
-  <h1>Crea tu feria</h1>
-  <div class="registro">
+  <div class="container">
+  <h2 id="titulo">Estas creando una feria</h2>
+  <div class="formulario">
   <form method="post" action="crearFeria" enctype="multipart/form-data">
     {{csrf_field()}}
   <div class="form-row">
@@ -63,17 +64,20 @@ Crea tu Feria
               </span>
           @enderror
         </div>
-        <img src="" id="profile-img-tag" width="200px" />
+        <img class="ml-4"src="" id="profile-img-tag" width="200px" />
         <br>
-        <input type="file"  id="upload" name="foto_feria">
+        <input class="mt-3" type="file"  id="upload" name="foto_feria">
         <br>
-  <button type="submit"id="crear">Feriate!</button>
+  <button type="submit"id="crear" class="mt-4" >Feriate!</button>
   <p class="mt-4">Despues de crear tu Feria , podes subir tus productos</p>
   </form>
   </div>
+  </div>
+</div>
+</div>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
    <link rel="stylesheet" href="/resources/demos/style.css">
 
   <script src="../js/crear_feria.js"></script>
-  </div>
+
 @endsection

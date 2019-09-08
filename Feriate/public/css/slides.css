@@ -113,15 +113,27 @@ div.redes{
   position: absolute;
   top: 30%;
   left: 5%;
-  width: 100%
+  width: 100%;
+  animation-duration: 1s;
 }
 div.redes i{
-  color:#407088;
+  color:#fb8691;
   font-size: 150%;
   margin: 2%;
 
 }
-
+div.marca{
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+div.marca h2{
+  font-family: 'Raleway',sans-serif;
+font-size: 25px;
+width: 40%;
+letter-spacing: 1px;
+font-weight: 400;
+}
 @media (min-width: 940px){
 body{
   width: 90%;
