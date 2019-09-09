@@ -22,7 +22,7 @@ Productos
       @else
        @foreach ($datosProductos as $producto)
           <div class="card col-md-4 col-lg-3" >
-          <img src="/storage/{{ $producto->imagen[0]['nombre']}}" class="card-img-top" alt="...">
+          <img src="/storage/{{ $producto->imagen[0]['nombre']}}" class="card-img-top" style="height: 30vh;" alt="...">
           <div class="card-body">
             <h3 class="card-text">{{ $producto['nombre']}}</h3>
             <div class="descripcion mt-4">

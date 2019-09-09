@@ -1,5 +1,6 @@
 div.container{
   height: fit-content;
+  width: 90%;
 }
 header {
   width: 100%;
@@ -124,11 +125,16 @@ div.card h5{
 div.comprar{
   text-align: center;
 }
-
+div.order-md-1{
+  display: none;
+}
 
 @media (min-width: 940px){
 div.container{
   height: fit-content;
+}
+div.order-md-1{
+  display: block;
 }
 div.producto{
   width: 90%;

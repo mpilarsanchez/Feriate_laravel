@@ -28,9 +28,9 @@ Perfil
               <input type="text" name="direccion" value="{{$usuario->direccion}}" placeholder="direccion">
               {{-- /!falta localidad y pais/ --}}
               <input type="text" name="tel" value="{{$usuario->tel}}" placeholder="telefono">
-              <input type="file" name="foto_perfil" class="foto_perfil" >
+              <input type="file" name="foto_perfil" class="foto_perfil mt-3" >
               <br>
-              <button  type="submit" name="button">Guardar</button>
+              <button class="mt-3" type="submit" name="button">Guardar</button>
             </form>
               <form id="eliminarUsuario" method="post" action="/borrarUsuario/{{$usuario->id}}" enctype="multipart/form-data">
               {{method_field('delete')}}
