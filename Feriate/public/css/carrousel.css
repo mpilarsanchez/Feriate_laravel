@@ -25,6 +25,13 @@ div.card a{
     display: block;
     width: 70%;
 }
+div.card-footer{
+  background-color: white;
+  border: 1px solid white;
+}
+div.card-body{
+  padding-bottom: 0px;
+}
 div.card a:hover{
   background-color:#FFD0D9;
     border: 2px solid #FFD0D9;
