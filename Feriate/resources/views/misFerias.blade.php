@@ -31,7 +31,7 @@ Mis Ferias
 
            @endif
           </div>
-          <div class="header-feria">
+          <div class="header-feria mt-4">
             <h5><a target="_blank" href="https://www.google.com/maps/place/{{$feria["ubicacion"]}}"><i class="fas fa-map-marker-alt"></i> <a/>  {{$feria["ubicacion"]}}</h5>
            <h3>{{$feria["nombre"]}}</h3>
 
@@ -41,7 +41,7 @@ Mis Ferias
            <h5>{{$feria["descripcion"]}}</h5>
          </div>
           </div>
-          <div class="boton-header mb-4">
+          <div class="boton-header mb-4 mt-4">
             <a href="/feria/{{$feria["id"]}}" ><button class="btn btn-light mt-3" type="button" name="button">Ver feria!</button></a>
           </div>
         </div>

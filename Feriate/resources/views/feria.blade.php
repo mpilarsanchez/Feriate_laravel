@@ -40,9 +40,9 @@ Feria
   @else
   <main>
     <div class="producto">
-    <div class="d-md-flex justify-content-around">
+    <div class="row d-md-flex justify-content-around">
       @foreach ($feria->productos as $producto)
-          <div class="card" >
+          <div class="card col-md-4 col-lg-3"" >
             <div class="header-feria">
             @if ($producto->imagen[0]['nombre'] == '')
             <img src="img_user/ropa2.jpg" class="card-img-top" alt="...">

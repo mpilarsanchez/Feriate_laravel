@@ -134,12 +134,7 @@ div.producto{
   width: 90%;
   margin: 0 auto;
 }
-div.producto div{
-  flex-wrap: wrap;
-}
-div.card{
-width: 29%;
-}
+
 div.card img{
   height: 210px;
   width: 100%;

@@ -24,7 +24,7 @@ Ferias por categoria
                <img src="/images/logo_feriate_deffault_ii.png" alt="">
             @endif
           </div>
-          <div class="header-feria mt-3">
+          <div class="header-feria mt-5">
              <h5><a target="_blank" href="https://www.google.com/maps/place/{{$feria["ubicacion"]}}"><i class="fas fa-map-marker-alt"></i> <a/>  {{$feria["ubicacion"]}}</h5>
             <h3>{{$feria["nombre"]}}</h3>
 
@@ -33,7 +33,7 @@ Ferias por categoria
             <h5>{{$feria["descripcion"]}}</h5>
           </div>
           </div>
-          <div class="boton-header">
+          <div class="boton-header mt-5">
             @if($feria["hasta"]<date('m/d/Y'))
               <button class="btn btn-light mt-3 mb-3" type="button" name="button">Finalizada</button>
             @else
