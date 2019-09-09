@@ -16,7 +16,7 @@ class FeriasController extends Controller
      public function datosFerias($categoria)
      {
       if($categoria == 'Todas'){
-         $datosFerias =Feria::all();
+         $datosFerias =Feria::orderBy('hasta', 'DESC')->get();
          $vac = compact("datosFerias");
          return view("ferias", $vac);
       }else{
