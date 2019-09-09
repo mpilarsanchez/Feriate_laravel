@@ -112,7 +112,7 @@ div.redes i:hover{
 div.redes{
   position: absolute;
   top: 30%;
-  left: 5%;
+  left: 67%;
   width: 100%;
   animation-duration: 1s;
 }
@@ -129,7 +129,7 @@ div.marca{
 }
 div.marca h2{
   font-family: 'Raleway',sans-serif;
-font-size: 25px;
+font-size: 15px;
 width: 40%;
 letter-spacing: 1px;
 font-weight: 400;
@@ -185,12 +185,17 @@ div.comprar img{
 }
 div.redes{
   position: absolute;
-top: 8%;
-left: 63%;
+  top: 20%;
+  left: 67%;
+  width: 100%;
+  animation-duration: 1s;
 }
 div.redes i{
   font-size: 300%;
   margin: 2%;
 
+}
+div.marca h2{
+  font-size: 35px;
 }
 }

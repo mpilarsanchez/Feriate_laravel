@@ -1,4 +1,6 @@
-
+div.container{
+  width: 90%;
+}
 div.feria {
   -webkit-box-shadow: 10px 11px 12px 0px rgba(0, 0, 0, 0.32);
   -moz-box-shadow: 10px 11px 12px 0px rgba(0, 0, 0, 0.32);
@@ -78,5 +80,8 @@ height: 150px;
 }
 div.header-feria{
   height: 150px;
+}
+div.container{
+  width: 90%;
 }
 }

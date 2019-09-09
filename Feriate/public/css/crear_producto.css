@@ -6,19 +6,18 @@ font-family: "Inconsolata", sans-serif;
 span{
   color: #FF6978;
 }
+
 option{
 font-family: "inconsolata", sans-serif;
 color: #3e403f;
 }
 
 div.imagen{
-  width: 20%;
+  width: 100%;
   display: block;
-  margin: 0 auto;
+
 }
-div.imagen.profile img{
-  width: 20%;
-}
+
 h2#titulo{
   font-family: "Inconsolata", sans-serif;
   font-size:100%;
@@ -29,7 +28,7 @@ h2#titulo{
 
 }
 main{
-  width: 80%;
+  width: 100%;
   text-align: center;
   border-radius: 5px;
   margin: 2% auto;
@@ -73,6 +72,15 @@ button.boton{
 }
 
 @media (min-width: 940px){
-
-
+main{
+  width: 80%;
+}
+div.imagen{
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+}
+div.imagen.profile img{
+  width: 20%;
+}
 }

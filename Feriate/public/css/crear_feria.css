@@ -16,7 +16,7 @@ h2#titulo{
 }
 div.formulario{
   font-family: "Inconsolata", sans-serif;
-  width: 80%;
+  width: 100%;
   text-align: center;
   border-radius: 5px;
   margin: 2% auto;
@@ -34,7 +34,7 @@ h3{
 div.foto{
   margin: 0 auto;
   width: 100%;
-  
+
 }
 #crear {
   display: block;
@@ -58,5 +58,8 @@ div.descripcion h3{
   font-size: 90%;
 }
 @media (min-width: 940px){
+  div.formulario{
+    width: 80%;
+      }
 
 }
