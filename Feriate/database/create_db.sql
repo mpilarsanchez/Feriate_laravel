@@ -1,23 +1,26 @@
 CREATE DATABASE `feriate` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE feriate;
 
-  CREATE TABLE `users` (
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    `nombre` varchar(45) NOT NULL,
-    `apellido` varchar(45) NOT NULL,
-    `email` varchar(45) NOT NULL,
-    `password` varchar(100) NOT NULL,
-    `tel` bigint(100) DEFAULT NULL,
-    `direccion` varchar(100) DEFAULT NULL,
-    `localidad` varchar(45) DEFAULT NULL,
-    `pais` int(11) DEFAULT NULL,
-    `created_at` datetime NOT NULL,
-    `updated_at` datetime NOT NULL,
-    `intentos_log` int(11) DEFAULT NULL,
-    `activo` tinyint(4) DEFAULT NULL,
-    `notificaciones` tinyint(4) DEFAULT NULL,
-    PRIMARY KEY (`id`)
-  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+CREATE TABLE `users` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`nombre` varchar(45) NOT NULL,
+`apellido` varchar(45) NOT NULL,
+`email` varchar(45) NOT NULL,
+`password` varchar(100) NOT NULL,
+`tel` bigint(100) DEFAULT NULL,
+`direccion` varchar(100) DEFAULT NULL,
+`localidad` varchar(45) DEFAULT NULL,
+`pais` int(11) DEFAULT NULL,
+`created_at` datetime DEFAULT NULL,
+`intentos_log` int(11) DEFAULT NULL,
+`activo` tinyint(4) DEFAULT NULL,
+`notificaciones` tinyint(4) DEFAULT NULL,
+`updated_at` datetime DEFAULT NULL,
+`remember_token` varchar(100) DEFAULT NULL,
+`email_verified_at` varchar(100) DEFAULT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+
 
   CREATE TABLE `ferias` (
       `id` int(11) NOT NULL AUTO_INCREMENT,

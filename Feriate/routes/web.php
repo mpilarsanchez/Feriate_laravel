@@ -15,7 +15,7 @@ Auth::routes(['verify'=> true]);
 
 Route::get('/home',function(){
   return redirect('/index');
-});
+})->middleware('verified');
  Route::get('/index', 'CategoriasContoller@index');
  Route::get('/', 'CategoriasContoller@index');
  //
@@ -24,7 +24,7 @@ Route::get('/home',function(){
  //
  Route::get('/productos/categoria/{categoria}', 'ProductosController@datosProductos');
  //
- Route::middleware(['auth'])->group(function(){
+ Route::middleware(['auth', 'verified'])->group(function(){
    Route::get('/crearFeria',function(){
      return view('crearFeria');
    });
