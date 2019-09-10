@@ -28,7 +28,7 @@
             $color = 'primary';
     }
 ?>
-@component('mail::button', ['url' => $actionUrl.':8000', 'color' => $color])
+@component('mail::button', ['url' => $actionUrl, 'color' => $color])
 {{ $actionText }}
 @endcomponent
 @endisset
