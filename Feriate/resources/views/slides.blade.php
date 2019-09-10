@@ -47,9 +47,9 @@
           <h2 >seguinos para enterarte donde estan las ferias este finde</h2>
         </div>
       <div class="redes animated swing" id="animacion">
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-facebook"></i>
+        <a target="_blank" href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>        
       </div>
         </div>
       </div>

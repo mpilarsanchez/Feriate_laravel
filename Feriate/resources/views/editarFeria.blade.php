@@ -19,24 +19,50 @@ Edita tu feria
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="nombre"> Nombre de la feria <span>*</span></label>
-          <input type="nombre" class="form-control" id="nombre" placeholder="Nombre de tu feria" name="nombre" value="{{$feriaEdit->nombre}}" required>
+          <input type="nombre" class="form-control @error('nombre') is-invalid @enderror"  id="nombre" placeholder="Nombre de tu feria" name="nombre" value="{{$feriaEdit->nombre}}" required>
+          @error('nombre')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
         </div>
         <div class="form-group col-md-4">
           <label for="ubicacion"> Ubicacion  <span>*</span></label>
-          <input type="text" class="form-control" id="ubicacion" placeholder="Ubicacion" name="ubicacion"  value="{{$feriaEdit->ubicacion}}" required>
+          <input type="text" class="form-control @error('ubicacion') is-invalid @enderror" id="ubicacion" placeholder="Ubicacion" name="ubicacion"  value="{{$feriaEdit->ubicacion}}" required>
+          @error('ubicacion')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
         </div>
         <div class="form-group col-md-4">
           <label for="datepicker"> Desde <span>*</span></label>
-          <input type="text" class="form-control" id="datepicker" placeholder="fecha inicio" name="desde"  value="{{$feriaEdit->desde}}" required>
-        </div>
+          <input type="text" class="form-control @error('desde') is-invalid @enderror" id="datepicker" placeholder="fecha inicio" name="desde"  value="{{$feriaEdit->desde}}" required>
+
+          @error('desde')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+          </div>
         <div class="form-group col-md-4">
           <label for="datepicker1"> Hasta <span>*</span></label>
-          <input type="text" class="form-control" id="datepicker1" placeholder="fecha finalizacion" name="hasta"  value="{{$feriaEdit->hasta}}" required>
+          <input type="text" class="form-control @error('hasta') is-invalid @enderror" id="datepicker1" placeholder="fecha finalizacion" name="hasta"  value="{{$feriaEdit->hasta}}" required>
+          @error('hasta')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
         </div>
         <script src="./js/crear_feria.js"></script>
         <div class="form-group col-md-4">
           <label for="descripcion"> Descripcion <span>*</span></label>
-          <input type="text" name="descripcion" class="form-control" id="descripcion" placeholder="descripcion"  value="{{$feriaEdit->descripcion}}">
+          <input type="text" name="descripcion" class="form-control @error('descripcion') is-invalid @enderror" id="descripcion" placeholder="descripcion"  value="{{$feriaEdit->descripcion}}">
+          @error('descripcion')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
         </div>
         <div class="foto">
           <div class="form-group">

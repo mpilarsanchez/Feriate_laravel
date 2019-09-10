@@ -95,6 +95,14 @@ CREATE TABLE `carrito` (
     CONSTRAINT `carr_us_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+  CREATE TABLE `password_resets` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `email` varchar(45) DEFAULT NULL,
+    `token` varchar(200) DEFAULT NULL,
+    `created_at` varchar(45) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
   -- //desde aca ir revisando y creando las tablas nooooo usarr!!!!!
 
   CREATE TABLE `comentarios` (
