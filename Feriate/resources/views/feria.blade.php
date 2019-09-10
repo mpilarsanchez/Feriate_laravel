@@ -42,7 +42,7 @@ Feria
     <div class="producto">
     <div class="row d-md-flex justify-content-around">
       @foreach ($feria->productos as $producto)
-          <div class="card col-md-4 col-lg-3"" >
+          <div class="card col-md-4 col-lg-3" >
             <div class="header-feria">
             @if ($producto->imagen[0]['nombre'] == '')
             <img src="img_user/ropa2.jpg" class="card-img-top" alt="...">
@@ -55,10 +55,10 @@ Feria
             <div class="descripcion">
               <h5 class="descripcion"><b>{{ $producto['descripcion'] }}</b><h5>
              <h5 class="precio">Precio:{{$producto['precio'] }}<h5>
-             <h5 class="talle">Talle:{{$producto['talle'] }}</h5>
+             <h5 class="talle">Talle:{{($producto['talle'] != null)?  $producto['talle'] : 'Sin info'}}</h5>
            </div>
-           <div class="descripcion">
-             <h5 class="estado">Estado:{{ $producto['estado'] }}</h5>
+           <div class="estado">
+                <h5 class="estado">Estado:{{($producto['estado'] != null)?  $producto['estado'] : 'Sin info'}}</h5>
              <h5 class="cantidad">Cantidad:{{ $producto['cantidad'] }}</h5>
             </div>
         </div>

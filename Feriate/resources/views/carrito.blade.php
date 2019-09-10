@@ -30,7 +30,7 @@ Carrito
   <input type="hidden" name="id" value="{{$producto['id']}}">
   <button type="submit"><i class="fas fa-tag"></i> Quitar del carrito</button>
 </form>
-      <a class="ver_mas" href="#">  Ver más del vendedor</a>
+      <a class="ver_mas" href="/productos/categoria/{{$categoria[0]['cat_nombre']}}">  Ver productos similares</a>
     </div>
   </div>
 </div>

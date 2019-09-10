@@ -12,12 +12,6 @@ $( function() {
  $("#foto1").change(function(){
      readURL(this);
  });
- $("#foto2").change(function(){
-     readURL(this);
- });
- $("#foto3").change(function(){
-     readURL(this);
- });
 
  function showHiddeTalle(){
    $('.categoria').change(function(){

@@ -65,7 +65,8 @@ Carga tus Productos
             <label for="inputGroupSelect01">Talle<span>*</span></label>
           </div>
           <select class="custom-select" id="inputGroupSelect01" name="talle">
-            <option selected>xs</option>
+            <option disabled selected value> -- selecciona una opcion -- </option>
+            <option value="0">xs</option>
             <option value="1">s</option>
             <option value="2">m</option>
             <option value="3">l</option>
@@ -77,14 +78,14 @@ Carga tus Productos
             <label  for="inputGroupSelect01">Estado <span>*</span></label>
           </div>
           <select class="custom-select" id="inputGroupSelect01" name="estado">
-            <option selected>elige</option>
+            <option disabled selected value> -- selecciona una opcion -- </option>
             <option value="bueno">bueno</option>
             <option value="malo">malo</option>
             <option value="nuevo">nuevo</option>
           </select>
       </div>
        </div>
-    
+
        <div class="upload_img">
         <div class="imagen">
           <h3>Imagen Principal</h3>

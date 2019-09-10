@@ -89,10 +89,10 @@ Carga tus Productos
        <div class="upload_img">
         <div class="imagen">
           <h3>Imagen Principal</h3>
-          <img src="/{{$productoEdit->imagenes[0]['nombre']}}" class="profile"  width="200px">
+          <img src="/storage/{{$productoEdit->imagen[0]['nombre']}}" class="profile"  width="200px">
           <input type="file" class="form-control-file" id="foto1" name="foto_producto">
         </div>
-        
+
         <input type="hidden" name="feria_id" value="{{$productoEdit['feria_id']}}">
      <button type="submit" class="boton btn btn-outline-light btn btn-lg btn-block mt-3" id="boton">Actualizar!</button>
     </form>

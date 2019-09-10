@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Carrito;
 use App\Producto;
+use App\Categoria;
 use Auth;
 
 class CarritoController extends Controller
@@ -27,10 +28,13 @@ class CarritoController extends Controller
       $vac = compact("datosProductos");
       return view("carrito", $vac);
     }else{
+
       $id = $productosCarrito[0]["producto_id"];
       $datosProductos =  Producto::where('id','=', $id)
       ->get();
-      $vac = compact("datosProductos");
+      $categoria = Categoria::where('cat_id',$datosProductos[0]["categoria_id"])
+      ->get();
+      $vac = compact("datosProductos",'categoria');
       return view("carrito", $vac);
       }
   }
