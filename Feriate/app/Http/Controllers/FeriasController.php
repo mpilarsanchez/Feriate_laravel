@@ -120,7 +120,27 @@ class FeriasController extends Controller
 
 
   public function update(Request $req, $id){
+    //VALIDACION
+      $reglas =[
+        //del lado izquierdo campos del formulario que quiero validar(tenemos que utilizar el mismo name del input formulario)
+        "nombre"=> "string|min:3",
+        "ubicacion"=> "string|min:3",
+        "desde"=>"date",
+        "hasta"=>"date",
+        "descripcion"=>"string|min:10"
+      ];
 
+      $mensajes=[
+      "string"=>"El campo :attribute tiene que ser un texto",
+      "min"=>"El campo :attribute tiene un minimo de :min",
+      "max"=>"El campo :attribute tiene un maximo de :max",
+      "numeric"=>"El campo :attribute debe ser un numero",
+      "date"=> "El campo :attribute debe ser una fecha",
+      "integer"=>"El campo :attribute debe ser un numero entero",
+      "unique"=>"El campo :attribute se encuentra repetido"
+      ];
+
+      $this->validate($req, $reglas, $mensajes);
     //  $id = $req["id"];
       $updatedFeria = Feria::find($id);
       $updatedFeria->user_id = Auth::user()->id;

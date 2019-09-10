@@ -66,7 +66,12 @@ Crea tu Feria
         </div>
         <img class="ml-4"src="" id="profile-img-tag" width="200px" />
         <br>
-        <input class="mt-3" type="file"  id="upload" name="foto_feria">
+        <input class="mt-3" type="file"  id="upload" name="foto_feria"  class="form-control @error('foto_feria') is-invalid @enderror">
+          @error('foto_feria')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
         <br>
   <button type="submit"id="crear" class="mt-4" >Feriate!</button>
   <p class="mt-4">Despues de crear tu Feria , podes subir tus productos</p>
