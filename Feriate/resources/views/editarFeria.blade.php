@@ -71,7 +71,7 @@ Edita tu feria
           @if($feriaEdit->imagen[0]["nombre"] == null)
             <img src="/images/logo_feriate_deffault_ii.png" alt="">
           @else
-          <img class="img-thumbnail" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/storage/{{$feriaEdit->imagen[0]["nombre"]}}" data-holder-rendered="true" style="width: 300px; height: 300px;">
+          <img id='profile-img-tag' class="img-thumbnail" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="/storage/{{$feriaEdit->imagen[0]["nombre"]}}" data-holder-rendered="true" style="width: 300px; height: 300px;">
           @endif
           <input  class="mt-3" type="file" id="upload" name="imagen">
         </div>

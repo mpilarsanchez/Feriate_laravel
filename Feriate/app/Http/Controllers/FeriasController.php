@@ -17,7 +17,8 @@ class FeriasController extends Controller
      {
       if($categoria == 'Todas'){
          $datosFerias =Feria::orderBy('hasta', 'DESC')->get();
-         $vac = compact("datosFerias");
+          $categoriaNombre = $categoria;
+         $vac = compact("datosFerias", "categoriaNombre");
          return view("ferias", $vac);
       }else{
        $datosCategorias = Categoria::where('cat_nombre', $categoria)->first();
@@ -33,7 +34,8 @@ class FeriasController extends Controller
          }
          $feria_id = $producto['feria_id'];
        }
-       $vac = compact("datosFerias");
+       $categoriaNombre = $categoria;
+       $vac = compact("datosFerias", "categoriaNombre");
        return view("ferias", $vac);
      }
    }

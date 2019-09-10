@@ -8,7 +8,7 @@ Productos
 @section('content')
   <div class="container">
 {{-- //{{dd($categoria)}} --}}
-<h2 id="titulo" class="mt-3">Estas viendo categoria / {{$categoria}}</h2>
+<h2 id="titulo" class="mt-3">Estas viendo productos de la categoria / {{$categoria}}</h2>
 <hr>
  @if($datosProductos->isEmpty())
      <div class="alert alert-danger" role="alert">
@@ -17,10 +17,12 @@ Productos
   @else
   <main>
     <div class="row d-md-flex justify-content-around">
-      @if($datosProductos[0]->feria['hasta'] < date('m/d/Y'))
-        <p>Lo Sentimos No Hay Productos para la categoria Seleccionada</p>
-      @else
+      <hr>
+
        @foreach ($datosProductos as $producto)
+         @if($producto->feria['hasta'] < date('m/d/Y'))
+
+         @else
           <div class="card col-md-4 col-lg-3" >
           <img src="/storage/{{ $producto->imagen[0]['nombre']}}" class="card-img-top" style="height: 30vh;" alt="...">
           <div class="card-body">
@@ -40,15 +42,15 @@ Productos
                      </form>
                  @endif
                  @else
-                      <a href="login.php"><button type="button" class="mt-4" name="button">  Logueate para comprar</a></button>
+                      <a href="/login"><button type="button" class="mt-4" name="button">  Logueate para comprar</a></button>
                 @endif
               <a href="/feria/{{ $producto['feria_id'] }}" ><button type="button" class="mt-4" name="button"> Ir a esta feria</a></button>
             </div>
           </div>
         </div>
-
-@endforeach
 @endif
+@endforeach
+
 {{$datosProductos->links()}}
 </div>
 @endif
